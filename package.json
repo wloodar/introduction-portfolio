@@ -6,10 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compile-sass": "node-sass -w src/common/sass/app.scss public/styles/app.css --output-style compressed",
+    "fulldev": "yarn dev & yarn compile-sass"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "next": "11.0.1",
+    "node-sass": "4.14.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

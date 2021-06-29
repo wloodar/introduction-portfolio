@@ -1,0 +1,91 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin absoluteCenter {
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin box-align($align: start, $align2: $align) {
+    -webkit-box-align: $align;
+    -moz-box-align: $align;
+    -webkit-align-items: $align2;
+    -ms-flex-align: $align;
+    align-items: $align2;
+}
+
+@mixin flex-justify-content($justify: start, $justify2: $justify) {
+    -webkit-box-pack: $justify;
+    -moz-box-pack: $justify;
+    -webkit-justify-content: $justify2;
+    -ms-flex-pack: $justify;
+    justify-content: $justify2;
+}
+
+@mixin transform($properties) {
+    transform: $properties;
+}
+
+@mixin transition($properties) {
+    -webkit-transition: $properties;
+    -moz-transition: $properties;
+    -o-transition: $properties;
+    transition: $properties;
+}
+
+
+@mixin createTransition($timing, $type) {
+    -webkit-transition: all $timing $type;
+    -moz-transition: all $timing $type;
+    -o-transition: all $timing $type;
+    transition: all $timing $type;
+}
+
+@mixin box-shadow($shadow) {
+    -moz-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// MEDIA QUERY MANAGAMENT
+
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media screen and (max-width: 37.5em) { @content }; // 600px
+    }
+    @else if $breakpoint == phablet {
+        @media (min-width: 37.5em)  { @content ; }
+    }
+    @else if $breakpoint == tab-port {
+        @media screen and (max-width: 56.25em) { @content }; // 900px
+    }
+    @else if $breakpoint == tab-land {
+        @media screen and (max-width: 75em) { @content }; // 1200px
+    }
+    @else if $breakpoint == big-desktop {
+        @media screen and(max-width: 112.5em) { @content }; // 1800px
+    }
+}

@@ -1,0 +1,16 @@
+@import '../common/sass/global.scss';
+
+.box {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+
+    h1 {
+        @include absoluteCenter;
+        font-size: 5rem;
+        background: -webkit-linear-gradient(#777, #555);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // color: lighten(#2121218f, 35%);
+    }
+}
