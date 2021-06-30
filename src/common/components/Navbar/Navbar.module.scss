@@ -13,6 +13,11 @@
         @include box-align(center);
         @include flex-justify-content(space-between);
     }
+
+    &__shadow {
+        @include transition(.3s ease box-shadow);
+        @include box-shadow(0 22px 31px 0 rgba(235, 235, 235, 0.47));
+    }
 }
 
 .left {
@@ -23,7 +28,7 @@
 .logo {
     h5 {
         font-size: 2.3rem;
-        color: var(--color-primary);
+        color: var(--color-dark);
     }
 }
 
@@ -36,6 +41,7 @@
             padding-left: 2.7rem;
 
             a {
+                font-size: 1.65rem;
                 font-weight: 500;
                 color: var(--color-dark);
 

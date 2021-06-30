@@ -1,0 +1,51 @@
+@import '../../sass/global.scss';
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #110111;
+}
+
+.navigation {
+    margin-bottom: var(--p-3);
+    padding-bottom: var(--p-3);
+    border-bottom: 1px solid #242424;
+    @include display-flex();
+    @include box-align(center);
+    @include flex-justify-content(space-between);
+}
+
+.logo {
+    h5 {
+        font-size: 2.3rem;
+        color: #fff;
+    }
+}
+
+.list {
+    ul {
+        li {
+            display: inline-block;
+            padding-left: 2.7rem;
+
+            a {
+                font-size: 1.45rem;
+                font-weight: 500;
+                color: #fff;
+
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+}
+
+.bottom {
+    @include display-flex();
+    @include flex-justify-content(space-between);
+    color: #616161;
+    // color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+}

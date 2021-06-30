@@ -6,3 +6,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.boxhead {
+    margin-bottom: 20px;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 3.7rem;
+        font-weight: 700;
+        color: var(--color-dark);
+    }
+}

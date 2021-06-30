@@ -1,8 +1,30 @@
+import { useEffect, useState } from 'react';
+import useTranslation from 'next-translate/useTranslation';
+import cs from 'classnames';
 import s from './Navbar.module.scss';
 
-function Navbar () {
+const Navbar = () => {
+
+    const [navbarShadow, setNavbarShadow] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setNavbarShadow(true);
+        } else {
+            setNavbarShadow(false);
+        }
+    }
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    });
+
+    const { t } = useTranslation();
+
     return (
-        <nav className={s.nav}>
+        <nav className={cs(s.nav, navbarShadow ? s.nav__shadow : null )}>
             <div className="container">
                 <div className={s.left}>
                     <div className={s.logo}>
@@ -10,10 +32,10 @@ function Navbar () {
                     </div>
                     <div className={s.list}>
                         <ul>
-                            <li><a href="#about">O mnie</a></li>
-                            <li><a href="#portfolio">Moje realizacje</a></li>
-                            <li><a href="#technologies">Technologie</a></li>
-                            <li><a href="#kontakt">Kontakt</a></li>
+                            <li><a href="#about">{t('common:About me')}</a></li>
+                            <li><a href="#portfolio">{t('common:My realizations')}</a></li>
+                            <li><a href="#technologies">{t('common:Technologies')}</a></li>
+                            <li><a href="#kontakt">{t('common:Contact')}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -22,7 +44,7 @@ function Navbar () {
                         <button className="btn btn-border">PL</button>
                     </div>
                     <div className={s.action}>
-                        <button className="btn btn-primary-bright">Skontaktuj się</button>
+                        <button className="btn btn-primary-bright">{t('common:Reach me')}</button>
                     </div>
                 </div>
             </div>

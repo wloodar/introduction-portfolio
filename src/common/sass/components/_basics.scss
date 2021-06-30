@@ -1,3 +1,7 @@
+.center {
+    text-align: center;
+}
+
 .btn {
     border-radius: var(--border-radius);
     padding: 12px 19px;
@@ -5,12 +9,13 @@
     font-size: 1.35rem;
     font-weight: 600;
     cursor: pointer;
-    // background: var(--surface-background);
-    // color: var(--color-dark);
+    background: var(--surface-background);
+    color: var(--color-dark);
 }
 
 .btn-primary {
-
+    background: var(--color-primary);
+    color: #fff;
 }
 
 .btn-primary-bright {
@@ -21,6 +26,7 @@
 .btn-border {
     border: 1px solid #f1f1f1;
     color: var(--color-dark);
+    background: #fff;
 
     &:hover {
         background: #fbfbfb;

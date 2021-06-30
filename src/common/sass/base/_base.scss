@@ -32,6 +32,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+// h5 {
+//     font-size: 1.9rem;
+//     font-weight: 500;
+//     color: var(--color-dark);
+// }
+
 a {
     color: inherit;
     text-decoration: none;
@@ -48,11 +54,17 @@ input, button, select, textarea {
     font-family: $font-primary;
 }
 
+ul {
+    list-style-type: none;
+}
+
 :root {
     --color-primary: #1872fa;
     --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
     --color-dark: #132e4d;
+
+    --surface-background: #f2f2ff;
 
     --border-radius: 300px;
 
@@ -67,6 +79,8 @@ input, button, select, textarea {
     --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
     --color-dark: #132e4d;
+
+    --surface-background: #f2f2ff;
 
     --border-radius: 300px;
 
