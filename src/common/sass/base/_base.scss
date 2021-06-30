@@ -37,9 +37,24 @@ a {
     text-decoration: none;
 }
 
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+input, button, select, textarea {
+    outline: 0;
+    font-family: $font-primary;
+}
+
 :root {
     --color-primary: #1872fa;
+    --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
+    --color-dark: #132e4d;
+
+    --border-radius: 300px;
 
     --p-1: 12px;
     --p-2: 18px;
@@ -49,7 +64,11 @@ a {
 
 [data-theme='dark'] {
     --color-primary: #1872fa;
+    --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
+    --color-dark: #132e4d;
+
+    --border-radius: 300px;
 
     --p-1: 12px;
     --p-2: 18px;
