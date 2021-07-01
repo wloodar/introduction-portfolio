@@ -1,3 +1,5 @@
+@import '../../common/sass/global.scss';
+
 .contactForm {
     input, textarea {
         width: 100%;
@@ -13,6 +15,9 @@
     margin-top: 40px;
     padding-top: 45px;
     border-top: 1px solid var(--border-primary);
+    @include display-flex();
+    @include box-align(center);
+    @include flex-justify-content(space-between);
 
     &__row {
         margin-bottom: 35px;
@@ -20,6 +25,19 @@
         a {
             font-size: 2.7rem;
             color: #717171;
+            @include transition(.3s color ease);
+
+            &:hover {
+                color: var(--color-primary);
+            }
         }
+    }
+
+    &__graphic {
+        width: 290px;
+    }
+
+    &__memoji {
+        width: 100%;
     }
 }

@@ -39,3 +39,11 @@
     font-weight: 500;
     resize: none;
 }
+
+.bsTextarea:invalid::-webkit-input-placeholder {
+    color: -internal-light-dark(black, white);
+    @include transition(.2s all ease-out);
+}
+.bsTextarea:focus::-webkit-input-placeholder {
+    color:transparent;    
+}

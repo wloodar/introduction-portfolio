@@ -4,6 +4,8 @@ import useTranslation from 'next-translate/useTranslation';
 import cs from 'classnames';
 import s from './Navbar.module.scss';
 
+import Internationalization from '../../../modules/internationalization/internationalization'; 
+
 const Navbar = () => {
 
     const [navbarShadow, setNavbarShadow] = useState(false);
@@ -36,13 +38,17 @@ const Navbar = () => {
                             <li><a href="#about">{t('common:About me')}</a></li>
                             <li><a href="#portfolio">{t('common:My realizations')}</a></li>
                             <li><a href="#technologies">{t('common:Technologies')}</a></li>
-                            <li><Link href="/contact">{t('common:Contact')}</Link></li>
+                            <li>
+                                <Link href="/contact">
+                                    <a>{t('common:Contact')}</a>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div className={s.right}>
                     <div className={s.lang}>
-                        <button className="btn btn-border">PL</button>
+                        <Internationalization/>
                     </div>
                     <div className={s.action}>
                         <Link href="/contact">

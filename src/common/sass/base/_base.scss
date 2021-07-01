@@ -58,6 +58,12 @@ ul {
     list-style-type: none;
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 // --color-dark: #132e4d;
 
 :root {
@@ -71,7 +77,7 @@ ul {
 
     --surface-background: #f2f2ff;
 
-    --border-radius: 12px;
+    --border-radius: 11px;
 
     --p-1: 12px;
     --p-2: 18px;
@@ -90,7 +96,7 @@ ul {
 
     --surface-background: #f2f2ff;
 
-    --border-radius: 12px;
+    --border-radius: 11px;
 
     --p-1: 12px;
     --p-2: 18px;

@@ -17,6 +17,7 @@
     background: var(--color-primary);
     padding: 12px 45px;
     color: #fff;
+    @include transition(.3s opacity ease);
 
     &:hover {
         opacity: .84;

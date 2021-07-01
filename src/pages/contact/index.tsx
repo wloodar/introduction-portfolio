@@ -1,5 +1,8 @@
 import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image'
+import Link from 'next/link';
 import Layout from '../../common/components/Layout/Layout';
+import MemojiFace from '../../../public/img/memoji-peace.png';
 
 import s from './contact.module.scss';
 
@@ -43,23 +46,34 @@ const Contact = () => {
                     <button type="submit" className="btn btnPrimary">{t('common:Send')}</button>
                 </form>
                 <div className={s.contactDetails}>
-                    <div className="boxhead">
-                        <h2>Github</h2>
+                    <div className={s.contactDetails__info}>
+                        <div className="boxhead">
+                            <h2>Github</h2>
+                        </div>
+                        <div className={s.contactDetails__row}>
+                            <a href="https://github.com/wloodar" target="_blank">github.com/wloodar</a>
+                        </div>
+                        <div className="boxhead">
+                            <h2>{t('common:Phone')}</h2>
+                        </div>
+                        <div className={s.contactDetails__row}>
+                            <a href="tel:+48501122712" target="_blank">+48 501 122 712</a>
+                        </div>
+                        <div className="boxhead">
+                            <h2>Email</h2>
+                        </div>
+                        <div className={s.contactDetails__row}>
+                            <a href="mailto:wlodardev@gmail.com" target="_blank">wlodardev@gmail.com</a>
+                        </div>
                     </div>
-                    <div className={s.contactDetails__row}>
-                        <a href="https://github.com/wloodar" target="_blank">github.com/wloodar</a>
-                    </div>
-                    <div className="boxhead">
-                        <h2>{t('common:Phone')}</h2>
-                    </div>
-                    <div className={s.contactDetails__row}>
-                        <a href="tel:+48501122712" target="_blank">+48 501 122 712</a>
-                    </div>
-                    <div className="boxhead">
-                        <h2>Email</h2>
-                    </div>
-                    <div className={s.contactDetails__row}>
-                        <a href="mailto:wlodardev@gmail.com" target="_blank">wlodardev@gmail.com</a>
+                    <div className={s.contactDetails__graphic}>
+                        <div className={s.contactDetails__memoji}>
+                            <Image 
+                                src={MemojiFace} 
+                                alt="Memoji Face" 
+                                objectFit="contain"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
