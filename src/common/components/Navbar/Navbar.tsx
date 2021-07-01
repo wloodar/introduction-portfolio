@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 import cs from 'classnames';
 import s from './Navbar.module.scss';
@@ -28,14 +29,14 @@ const Navbar = () => {
             <div className="container">
                 <div className={s.left}>
                     <div className={s.logo}>
-                        <h5>Wlodar</h5>
+                        <h5><Link href="/">Wlodar</Link></h5>
                     </div>
                     <div className={s.list}>
                         <ul>
                             <li><a href="#about">{t('common:About me')}</a></li>
                             <li><a href="#portfolio">{t('common:My realizations')}</a></li>
                             <li><a href="#technologies">{t('common:Technologies')}</a></li>
-                            <li><a href="#kontakt">{t('common:Contact')}</a></li>
+                            <li><Link href="/contact">{t('common:Contact')}</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -44,7 +45,9 @@ const Navbar = () => {
                         <button className="btn btn-border">PL</button>
                     </div>
                     <div className={s.action}>
-                        <button className="btn btn-primary-bright">{t('common:Reach me')}</button>
+                        <Link href="/contact">
+                            <a className="btn btn-primary-bright">{t('common:Reach me')}</a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.3.1",
+    "framer-motion": "^4.1.17",
     "next": "11.0.1",
     "next-translate": "^1.0.7",
     "node-sass": "4.14.1",

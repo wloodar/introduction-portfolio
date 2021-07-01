@@ -12,7 +12,7 @@ function Home() {
             <h1>This will be a portfolio :)</h1>
         </div> */}
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <Contact/>
+        {/* <Contact/> */}
         <Footer/>
         </>
     )

@@ -10,7 +10,7 @@ function Footer () {
             <div className="container">
                 <div className={s.navigation}>
                     <div className={s.logo}>
-                        <h5>Wlodar</h5>
+                        <h5>Jakub Włodarczyk</h5>
                     </div>
                     <div className={s.list}>
                         <ul>

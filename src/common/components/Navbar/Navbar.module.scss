@@ -5,7 +5,9 @@
     top: 0; right: 0; left: 0;
     padding-top: var(--p-2);
     padding-bottom: var(--p-2);
-    background: #fff;
+    background: rgba($color: #fff, $alpha: .93);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     z-index: 10;
 
     :global(.container) {
@@ -55,6 +57,10 @@
 
 .right {
     @include display-flex();
+
+    a {
+        display: block;
+    }
 }
 
 .lang {

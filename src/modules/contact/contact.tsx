@@ -19,7 +19,7 @@ const contact = () => {
                     </li>
                     <li>
                         <h5>{t("common:Phone")}</h5>
-                        <a href="tel:501122712">501 122 712</a>
+                        <a href="tel:+48501122712">+48 501 122 712</a>
                     </li>
                     <li>
                         <h5>Instagram</h5>
