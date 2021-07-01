@@ -1,5 +1,41 @@
+.formGroup {
+    width: 100%;
+    margin-bottom: var(--p-2);
+}
+
+.bsLabel {
+    display: inline-block;
+    margin-bottom: var(--p-1);
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
 .bsInput {
     border-radius: var(--border-radius);
     background: var(--color-gray);
-    padding: 15px 20px;
+    border: 0;
+    padding: 17px 20px;
+    font-size: 1.45rem;
+    font-weight: 500;
+    @include transition(.15s background ease-in-out);
+}
+
+.bsInput:invalid::-webkit-input-placeholder {
+    color: -internal-light-dark(black, white);
+    @include transition(.2s all ease-out);
+}
+.bsInput:focus::-webkit-input-placeholder {
+    color:transparent;    
+}
+
+.bsTextarea {
+    border-radius: var(--border-radius);
+    background: var(--color-gray);
+    min-height: 15rem;
+    border: 0;
+    padding: 17px 20px;
+    font-size: 1.45rem;
+    font-weight: 500;
+    resize: none;
 }

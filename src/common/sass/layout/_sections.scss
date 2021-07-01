@@ -1,14 +1,21 @@
-.container {
-    max-width: 1300px;
-    padding-left: var(--p-2);
-    padding-right: var(--p-2);
+.container, .s-container {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
+    padding-left: var(--p-2);
+    padding-right: var(--p-2);
+}
+
+.container {
+    max-width: 1300px;
+}
+
+.s-container {
+    max-width: 900px;
 }
 
 .boxhead {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     h1, h2, h3, h4, h5, h6 {
         font-size: 3.7rem;

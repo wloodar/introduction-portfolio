@@ -5,6 +5,17 @@
     "Contact": "Kontakt",
     "Reach me": "Skontaktuj się",
 
+    "Label name": "Twoje Imię i Nazwisko",
+    "Input name": "np. Stefan Kowalski",
+
+    "Label email": "Twój E-mail",
+    "Input email": "np. stefankowalski@gmail.com",
+
+    "Label message": "Wiadomość",
+    "Textarea message": "Miejsce na Twoją wiadomość",
+
+    "Send": "Wyślij",
+
     "In touch?": "W kontakcie?",
     "Phone": "Telefon"
 }

@@ -5,6 +5,17 @@
     "Contact": "Contact",
     "Reach me": "Reach me",
 
+    "Label name": "Your name",
+    "Input name": "e.g. John Doe",
+
+    "Label email": "Your Email",
+    "Input email": "e.g. johndoe@gmail.com",
+
+    "Label message": "Message",
+    "Textarea message": "Place for Your message",
+
+    "Send": "Send",
+
     "In touch?": "In touch?",
     "Phone": "Phone"
 }
