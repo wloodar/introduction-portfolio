@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import cs from 'classnames';
 import Link from 'next/link';
 
@@ -29,9 +29,9 @@ const listOfLanguages: Array<Language> = [
 const Internalization = () => {
 
     const router = useRouter();
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
-    const LanguageItem = ({ locale }:any) => {
+    const LanguageItem:React.FC<{ locale: string }> = ({ locale }) => {
 
         const languageObj = listOfLanguages.filter(el => el.code === locale ? el : null)[0];
     
@@ -50,9 +50,17 @@ const Internalization = () => {
         )
     }
 
-    const framerMotionDropdownVariants = {
-        open: { opacity: 1, y: 0 },
-        closed: { opacity: 0, y: 12 },
+    const framerMotionDropdownVariants:Variants = {
+        open: { 
+            opacity: 1, 
+            y: 0, 
+            visibility: 'visible' 
+        },
+        closed: { 
+            opacity: 0, 
+            y: 12, 
+            visibility: 'hidden' 
+        }
     }
 
     return (
@@ -66,10 +74,10 @@ const Internalization = () => {
             </button>
 
             <motion.div 
-                initial={{ opacity: 0, y: 12 }} 
+                initial={{ opacity: 0, y: 12, visibility: 'hidden' }} 
+                variants={framerMotionDropdownVariants}
                 transition={{ ease: 'easeOut', duration: 0.3 }}
                 animate={dropdownOpen ? "open" : "closed"}
-                variants={framerMotionDropdownVariants}
                 className={s.dropdown}
             >
                 <ul>

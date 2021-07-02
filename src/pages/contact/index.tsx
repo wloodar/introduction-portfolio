@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation';
+import React, { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
 import Layout from '../../common/components/Layout/Layout';
@@ -6,9 +7,52 @@ import MemojiFace from '../../../public/img/memoji-peace.png';
 
 import s from './contact.module.scss';
 
+interface ContactCredentials {
+    name: string,
+    email: string,
+    message: string
+}
+
+const emptyContactCredentials:ContactCredentials = {
+    name: "",
+    email: "",
+    message: ""
+}
+
 const Contact = () => {
 
     const { t } = useTranslation();
+    const [contactFormValues, setContactFormValues] = useState<ContactCredentials>(emptyContactCredentials)
+
+    const changeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setContactFormValues({...contactFormValues, [e.target.name]: e.target.value})
+    }
+
+    const submitContactForm = async (e: React.ChangeEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        const credentials: ContactCredentials = {
+            name: contactFormValues.name,
+            email: contactFormValues.email,
+            message: contactFormValues.message
+        }
+
+        let result = await fetch('/api/sendmail', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        })        
+
+        if (result.status === 200) {
+            setContactFormValues(emptyContactCredentials);
+            console.log('Message sent successfully');
+        } else {
+            console.log('An unexpected error occured');
+        }
+    }
 
     return (
         <Layout>
@@ -16,7 +60,7 @@ const Contact = () => {
                 <div className="boxhead">
                     <h2>{t('common:In touch?')}</h2>
                 </div>
-                <form className={s.contactForm}>
+                <form className={s.contactForm} onSubmit={submitContactForm}>
                     <div className="formGroup">
                         <label htmlFor="inputName" className="bsLabel">{t('common:Label name')}</label>
                         <input 
@@ -25,6 +69,7 @@ const Contact = () => {
                             id="inputName" 
                             className="bsInput" 
                             placeholder={t('common:Input name')} 
+                            onChange={changeHandler}
                             required
                         />
                     </div>
@@ -36,12 +81,20 @@ const Contact = () => {
                             id="inputEmail" 
                             className="bsInput" 
                             placeholder={t('common:Input email')} 
+                            onChange={changeHandler}
                             required
                         />
                     </div>
                     <div className="formGroup">
                         <label htmlFor="" className="bsLabel">{t('common:Label message')}</label>
-                        <textarea name="message" id="textareaMessage" className="bsTextarea" placeholder={t('common:Textarea message')} required></textarea>
+                        <textarea 
+                            name="message" 
+                            id="textareaMessage" 
+                            className="bsTextarea" 
+                            placeholder={t('common:Textarea message')} 
+                            onChange={changeHandler}
+                            required
+                        ></textarea>
                     </div>
                     <button type="submit" className="btn btnPrimary">{t('common:Send')}</button>
                 </form>
