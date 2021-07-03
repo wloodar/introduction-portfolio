@@ -1,16 +1,103 @@
 @import '../common/sass/global.scss';
 
-.box {
+.header {
+    // margin-top: 27vh;
     width: 100%;
-    height: 100vh;
-    background: #000;
+    margin-top: 25vh;
 
-    h1 {
-        @include absoluteCenter;
-        font-size: 5rem;
-        background: -webkit-linear-gradient(#777, #555);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        // color: lighten(#2121218f, 35%);
+    :global(.container) {
+        position: relative;
+    }
+
+    &__mockupLeft {
+        position: absolute;
+        left: 0;
+        bottom: 2%;
+        transform: rotate(-17deg);
+
+        img {
+            width: 300px;
+            @include createTransition(3s, ease);
+        }
+    }
+
+    &__mockupRight {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+        transform: rotate(15deg);
+
+        img {
+            width: 220px;
+            @include createTransition(3s, ease);
+        }
+    }
+
+    &__centerbox {
+        // @include absoluteCenter;
+        // top: 45%;
+        text-align: center;
+
+        h1 {
+            font-size: 5.7rem;
+            color: #111;
+
+            :global(.Typewriter) {
+                display: inline-block;
+            }
+
+            :global(.block) {
+                display: block;
+            }
+        }
+
+        p {
+            color: var(--secondary-text);
+            font-size: 2.2rem;
+            font-weight: 400;
+            padding-top: .7rem;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 2.4rem;
+            font-size: 1.6rem;
+        }
+        // a {
+        //     display: inline-block;
+        //     margin-top: 2.4rem;
+        //     font-size: 1.5rem;
+        //     font-weight: 500;
+        //     text-transform: uppercase;
+        //     padding: 1.2rem 3.7rem;
+        //     // background: #f1f1f1;
+        //     background: var(--color-primary);
+        //     color: #fff;
+        //     border-radius: 10px;
+        // }
+    }
+
+    &__scroll {
+        // position: absolute;
+        // left: 0; right: 0; bottom: 3.7rem;
+        margin-top: 10vh;
+        @include display-flex();
+        @include box-align(center);
+        @include flex-justify-content(center);
+        @include createTransition(3s, ease);
+
+        p {
+            font-weight: 500;
+            padding-right: .7rem;
+        }
+        
+        img {
+            width: 17px;
+        }
+    }
+
+    &__animation {
+        // @include transform(translateY(12px));
+        @include transform(translateY(21px));
     }
 }

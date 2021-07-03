@@ -20,10 +20,10 @@ function Footer () {
                                 <NavItem anchor="about" itemName={t('common:About me')}/>
                             </li>
                             <li>
-                                <NavItem anchor="realizations" itemName={t('common:My realizations')}/>
+                                <NavItem anchor="technologies" itemName={t('common:Technologies')}/>
                             </li>
                             <li>
-                                <NavItem anchor="technologies" itemName={t('common:Technologies')}/>
+                                <NavItem anchor="realizations" itemName={t('common:My realizations')}/>
                             </li>
                             <li>
                                 <NavItem anchor="contact" itemName={t('common:Contact')}/>
@@ -32,7 +32,7 @@ function Footer () {
                     </div>
                 </div>
                 <div className={s.bottom}>
-                    <span>Copyright © 2021 Wlodar</span>
+                    <span>Copyright © 2021 Wlodev</span>
                     <span>Jakub Włodarczyk • All Rights Reserved</span>
                 </div>
             </div>
