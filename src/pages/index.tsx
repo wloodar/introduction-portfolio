@@ -7,13 +7,11 @@ import Contact from '../modules/contact/contact';
 function Home() {
     return (
         <>
-        <Navbar/>
         {/* <div className={s.box}>
             <h1>This will be a portfolio :)</h1>
         </div> */}
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        {/* <Contact/> */}
-        <Footer/>
+        <Contact/>
         </>
     )
 }

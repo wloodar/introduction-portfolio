@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import cs from 'classnames';
 
 const FadeInComponent = ({ children }) => {
 
@@ -7,6 +8,7 @@ const FadeInComponent = ({ children }) => {
 
     const [opacityVal, setOpacityVal] = useState<number>(1);
     const [transformVal, setTransformVal] = useState<number>(0);
+    const [longTransiton, setLongTransition] = useState<boolean>(false);
 
     const fadeRef = useRef<HTMLDivElement>(null);
 
@@ -24,8 +26,19 @@ const FadeInComponent = ({ children }) => {
 
     const fadeIn = () => {        
         
-        let yPos:number = window.scrollY + window.outerHeight;        
+        let yPos:number = window.scrollY + window.innerHeight;        
         let elTop: number = fadeRef.current?.offsetTop === undefined ? 0 : fadeRef.current?.offsetTop;
+
+        if (yPos > (document.documentElement.offsetHeight - yPos / 10)) {
+
+            setOpacityVal(1);
+            setTransformVal(0);
+            setLongTransition(true);
+
+            return;
+        } else {
+            setLongTransition(false);
+        }
 
         if (yPos >= elTop && (yPos - animationSize) <= elTop) {
             let opacityValue = Math.round((yPos - elTop) / (animationSize / 100)) / 100;
@@ -48,7 +61,7 @@ const FadeInComponent = ({ children }) => {
     }
 
     return (
-        <div className="fadeComponent" ref={fadeRef} style={{ opacity: opacityVal, transform: `translateY(${transformVal}px)` }}>
+        <div className={cs('fadeComponent', longTransiton ? 'fadeComponent__long' : undefined)} ref={fadeRef} style={{ opacity: opacityVal, transform: `translateY(${transformVal}px)` }}>
             {children}
         </div>
     )   

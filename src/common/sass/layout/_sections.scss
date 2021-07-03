@@ -18,8 +18,19 @@
     margin-bottom: 30px;
 
     h1, h2, h3, h4, h5, h6 {
-        font-size: 3.7rem;
+        // font-size: 3.7rem;
+        font-size: 4.2rem;
         font-weight: 700;
         color: var(--color-dark);
+    }
+
+    &__icon {
+        @include display-flex();
+        @include box-align(center);
+
+        .icon {
+            margin-left: 1.7rem;
+            width: 4.2rem;
+        }
     }
 }

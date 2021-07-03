@@ -20,7 +20,7 @@ const listOfLanguages: Array<Language> = [
         flag_path: "pl.png"
     },
     {
-        code: "en-uk",
+        code: "en",
         name: "English",
         flag_path: "gb.png"
     }

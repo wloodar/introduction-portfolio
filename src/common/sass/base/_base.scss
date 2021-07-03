@@ -40,6 +40,7 @@ body {
 
 a {
     color: inherit;
+    cursor: pointer;
     text-decoration: none;
 }
 
@@ -71,7 +72,9 @@ img {
     --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
     --color-dark: #1f1f1f;
+    --color-white: #fff;
     --color-gray: #f2f2f2;
+    --color-gray-dark: #f1f1f4;
 
     --border-primary: #f1f1f1;
 
@@ -90,7 +93,9 @@ img {
     --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
     --color-dark: #1f1f1f;
+    --color-white: #fff;
     --color-gray: #f2f2f2;
+    --color-gray-dark: #f1f1f4;
 
     --border-primary: #f1f1f1;
 

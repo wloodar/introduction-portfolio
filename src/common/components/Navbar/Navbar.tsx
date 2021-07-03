@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import cs from 'classnames';
 import s from './Navbar.module.scss';
 
+import NavItem from '../NavItem/NavItem';
 import Internationalization from '../../../modules/internationalization/internationalization'; 
 
 const Navbar = () => {
@@ -35,13 +36,17 @@ const Navbar = () => {
                     </div>
                     <div className={s.list}>
                         <ul>
-                            <li><a href="#about">{t('common:About me')}</a></li>
-                            <li><a href="#portfolio">{t('common:My realizations')}</a></li>
-                            <li><a href="#technologies">{t('common:Technologies')}</a></li>
                             <li>
-                                <Link href="/contact">
-                                    <a>{t('common:Contact')}</a>
-                                </Link>
+                                <NavItem anchor="about" itemName={t('common:About me')}/>
+                            </li>
+                            <li>
+                                <NavItem anchor="realizations" itemName={t('common:My realizations')}/>
+                            </li>
+                            <li>
+                                <NavItem anchor="technologies" itemName={t('common:Technologies')}/>
+                            </li>
+                            <li>
+                                <NavItem anchor="contact" itemName={t('common:Contact')}/>
                             </li>
                         </ul>
                     </div>
@@ -52,7 +57,7 @@ const Navbar = () => {
                     </div>
                     <div className={s.action}>
                         <Link href="/contact">
-                            <a className="btn btn-primary-bright">{t('common:Reach me')}</a>
+                            <a className="btn btnPrimary">{t('common:Reach me')}</a>
                         </Link>
                     </div>
                 </div>

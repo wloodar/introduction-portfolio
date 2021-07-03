@@ -2,6 +2,20 @@
     text-align: center;
 }
 
+.flex-center {
+    @include flex-justify-content(center);
+}
+
+.fadeComponent {
+    @include transition(100ms opacity ease);
+    @include transition(100ms transform ease);   
+
+    &__long {
+        @include transition(.4s opacity ease-out);
+        @include transition(.4s transform ease-out);   
+    }
+}
+
 .btn {
     border-radius: var(--border-radius);
     padding: 12px 19px;
