@@ -14,8 +14,8 @@ const FadeInComponent = ({ children }) => {
 
     useEffect(() => {
 
-        animationSize = window.outerHeight / 1.2;
-        wHeight = window.outerHeight / 10;
+        animationSize = window.innerHeight / 1.5;
+        wHeight = window.innerHeight / 10;
 
         window.addEventListener("scroll", () => fadeIn());
         

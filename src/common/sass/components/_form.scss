@@ -13,7 +13,7 @@
 
 .bsInput {
     border-radius: var(--border-radius);
-    background: var(--color-gray);
+    background: var(--surface-background);
     border: 0;
     padding: 17px 20px;
     font-size: 1.45rem;
@@ -31,7 +31,7 @@
 
 .bsTextarea {
     border-radius: var(--border-radius);
-    background: var(--color-gray);
+    background: var(--surface-background);
     min-height: 15rem;
     border: 0;
     padding: 17px 20px;

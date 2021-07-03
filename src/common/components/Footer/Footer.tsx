@@ -1,6 +1,8 @@
 import s from './Footer.module.scss';
 import useTranslation from 'next-translate/useTranslation';
 
+import NavItem from '../NavItem/NavItem';
+
 function Footer () {
 
     const { t } = useTranslation();
@@ -14,10 +16,18 @@ function Footer () {
                     </div>
                     <div className={s.list}>
                         <ul>
-                            <li><a href="#about">{t('common:About me')}</a></li>
-                            <li><a href="#portfolio">{t('common:My realizations')}</a></li>
-                            <li><a href="#technologies">{t('common:Technologies')}</a></li>
-                            <li><a href="#kontakt">{t('common:Contact')}</a></li>
+                            <li>
+                                <NavItem anchor="about" itemName={t('common:About me')}/>
+                            </li>
+                            <li>
+                                <NavItem anchor="realizations" itemName={t('common:My realizations')}/>
+                            </li>
+                            <li>
+                                <NavItem anchor="technologies" itemName={t('common:Technologies')}/>
+                            </li>
+                            <li>
+                                <NavItem anchor="contact" itemName={t('common:Contact')}/>
+                            </li>
                         </ul>
                     </div>
                 </div>

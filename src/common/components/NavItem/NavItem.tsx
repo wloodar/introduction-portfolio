@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 interface Props {
     anchor: string,
-    itemName: string
+    itemName: string,
+    classes?: string
 } 
 
-const NavItem:React.FC<Props> = ({ anchor, itemName }) => {
+const NavItem:React.FC<Props> = ({ anchor, itemName, classes }) => {
 
     const handleSmoothScroll = e => {
         e.preventDefault();
@@ -14,7 +15,7 @@ const NavItem:React.FC<Props> = ({ anchor, itemName }) => {
     }
 
     return (
-        <a  onClick={handleSmoothScroll}>
+        <a href={`#${anchor}`} onClick={handleSmoothScroll} className={classes}>
             {itemName}
         </a>
     )

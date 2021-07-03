@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="container">
                 <div className={s.left}>
                     <div className={s.logo}>
-                        <h5><Link href="/">Wlodar</Link></h5>
+                        <h5><Link href="/">Wlodev</Link></h5>
                     </div>
                     <div className={s.list}>
                         <ul>
@@ -56,9 +56,7 @@ const Navbar = () => {
                         <Internationalization/>
                     </div>
                     <div className={s.action}>
-                        <Link href="/contact">
-                            <a className="btn btnPrimary">{t('common:Reach me')}</a>
-                        </Link>
+                        <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
                     </div>
                 </div>
             </div>
