@@ -1,7 +1,7 @@
 import s from './Footer.module.scss';
 import useTranslation from 'next-translate/useTranslation';
 
-import NavItem from '../NavItem/NavItem';
+import NavList from '../NavList/NavList';
 
 function Footer () {
 
@@ -15,20 +15,7 @@ function Footer () {
                         <h5>Jakub Włodarczyk</h5>
                     </div>
                     <div className={s.list}>
-                        <ul>
-                            <li>
-                                <NavItem anchor="about" itemName={t('common:About me')}/>
-                            </li>
-                            <li>
-                                <NavItem anchor="technologies" itemName={t('common:Technologies')}/>
-                            </li>
-                            <li>
-                                <NavItem anchor="realizations" itemName={t('common:My realizations')}/>
-                            </li>
-                            <li>
-                                <NavItem anchor="contact" itemName={t('common:Contact')}/>
-                            </li>
-                        </ul>
+                        <NavList/>
                     </div>
                 </div>
                 <div className={s.bottom}>

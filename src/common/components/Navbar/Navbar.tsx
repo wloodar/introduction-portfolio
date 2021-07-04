@@ -6,6 +6,7 @@ import useTranslation from 'next-translate/useTranslation';
 import cs from 'classnames';
 import s from './Navbar.module.scss';
 
+import NavList from '../NavList/NavList';
 import NavItem from '../NavItem/NavItem';
 import Internationalization from '../../../modules/internationalization/internationalization'; 
 
@@ -38,20 +39,7 @@ const Navbar = () => {
                         </a>
                     </div>
                     <div className={s.list}>
-                        <ul>
-                            <li>
-                                <NavItem anchor="about" itemName={t('common:About me')}/>
-                            </li>
-                            <li>
-                                <NavItem anchor="technologies" itemName={t('common:Technologies')}/>
-                            </li>
-                            <li>
-                                <NavItem anchor="realizations" itemName={t('common:My realizations')}/>
-                            </li>
-                            <li>
-                                <NavItem anchor="contact" itemName={t('common:Contact')}/>
-                            </li>
-                        </ul>
+                        <NavList/>
                     </div>
                 </div>
                 <div className={s.right}>
