@@ -4,6 +4,7 @@
     // margin-top: 27vh;
     width: 100%;
     margin-top: 25vh;
+    margin-bottom: 25vh;
 
     :global(.container) {
         position: relative;
@@ -63,24 +64,10 @@
             margin-top: 2.4rem;
             font-size: 1.6rem;
         }
-        // a {
-        //     display: inline-block;
-        //     margin-top: 2.4rem;
-        //     font-size: 1.5rem;
-        //     font-weight: 500;
-        //     text-transform: uppercase;
-        //     padding: 1.2rem 3.7rem;
-        //     // background: #f1f1f1;
-        //     background: var(--color-primary);
-        //     color: #fff;
-        //     border-radius: 10px;
-        // }
     }
 
     &__scroll {
-        // position: absolute;
-        // left: 0; right: 0; bottom: 3.7rem;
-        margin-top: 10vh;
+        margin-top: 15vh;
         @include display-flex();
         @include box-align(center);
         @include flex-justify-content(center);

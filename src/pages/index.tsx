@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
 import Image from 'next/image';
 import cs from 'classnames';
 import Typewritter from 'typewriter-effect';
@@ -27,6 +28,9 @@ const Home = () => {
 
     return (
         <>
+        <Head>
+            <title>Wlodev - JS Dev | Jakub Wlodarczyk's Portfolio</title>
+        </Head>
         <header className={s.header}>
             <div className="container">
                 <div className={s.header__centerbox}>
@@ -47,7 +51,6 @@ const Home = () => {
                             />
                             <span className="block">{t('common:website')}.</span>
                         </h1>
-                        {/* <h1>Twoja<span className="main-header__typing" id="headertyper"></span> strona</h1> */}
                     </div>
                     <p>{t('common:Present yourself or')}</p>
                     <p>{t('common:Unveil your idea')}.</p>
@@ -74,7 +77,7 @@ const Home = () => {
                 </div>
             </div>
         </header>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        {/* <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> */}
         <Technologies/>
         <Contact/>
         </>

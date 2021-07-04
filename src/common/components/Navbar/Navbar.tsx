@@ -33,7 +33,9 @@ const Navbar = () => {
             <div className="container">
                 <div className={s.left}>
                     <div className={s.logo}>
-                        <h5><a onClick={() => animateScroll.scrollToTop()}>wlodev.com</a></h5>
+                        <a onClick={() => animateScroll.scrollToTop()}>
+                            <img src="/img/logo/wlodev-black-transparent.png" alt="" />
+                        </a>
                     </div>
                     <div className={s.list}>
                         <ul>
