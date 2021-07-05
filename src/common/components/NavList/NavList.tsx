@@ -31,7 +31,7 @@ const NavList = () => {
 
     return (
         <ul>
-            {data.map((val) => <li>
+            {data.map((val) => <li key={val.anchor}>
                 <NavItem anchor={val.anchor} itemName={val.name}/>
             </li>)}
         </ul>

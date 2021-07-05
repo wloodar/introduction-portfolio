@@ -3,8 +3,20 @@
 .header {
     // margin-top: 27vh;
     width: 100%;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    // min-height: 50vh;
+    padding-top: 25vh;
+    margin-bottom: 10vh;
+    z-index: -1;
+
+    &__bg {
+        position: absolute;
+        top: 0; height: 100vh; right: 0; left: 0;
+        background: url('../../public/img/header-gradient.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        opacity: 0.1;
+    }
 
     :global(.container) {
         position: relative;

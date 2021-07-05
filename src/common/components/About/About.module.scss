@@ -1,0 +1,25 @@
+@import '../../sass/global.scss';
+
+.wrap {
+    background: #fff;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.wrapper {
+    @include display-flex();
+}
+
+.description {
+    width: calc(100% - 370px);
+
+    :global(.boxhead) {
+        h2 {
+            color: #fff;
+        }
+    }
+}
+
+.memoji {
+    width: 370px;
+}

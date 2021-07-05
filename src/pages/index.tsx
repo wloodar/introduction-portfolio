@@ -1,11 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import Image from 'next/image';
 import cs from 'classnames';
 import Typewritter from 'typewriter-effect';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 import s from './index.module.scss';
 
+import About from '../common/components/About/About';
 import Technologies from '../common/components/Technologies/Technologies';
 import Contact from '../modules/contact/contact';
 
@@ -13,15 +17,49 @@ import LampypolskaMockup from '../../public/img/works/lampypolska-mockup.png';
 import SigmaMockup from '../../public/img/works/sigma-mockup.png';
 import PointerEmoji from '../../public/img/icons/white-down-pointing-backhand-index.png';
 
+// var action = gsap.timeline({
+        //     scrollTrigger: {
+        //       trigger: document.getElementById('main-header'),
+        //       pin: true,   
+        //       start: 'top top',
+        //       scrub: 0.3
+        //     },
+        //     defaults:{duration:3, ease:'none'}
+        //   })
+
 const Home = () => {
 
     const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+    const [tl, setTl]: any = useState();
+    const headerRef = useRef<HTMLElement>(null);
+    const headerBg = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
 
     useEffect(() => {
         const interval = setInterval(() => {
             setIsTransitioning(isTransitioning => !isTransitioning);
         }, 1000);
+
+        const stopTrigger = () => {
+            const tl = gsap.timeline({
+                delay: 1,
+                scrollTrigger: {
+                    trigger: headerRef.current,
+                    start: "top top",
+                    pin: true,
+                    scrub: true,
+                }
+            })
+
+            tl.to(headerRef.current, { opacity: 0, scale: 0.8 });
+            tl.to(headerBg.current, { opacity: 0 }).duration(0);
+
+            return tl;
+        }
+
+        const master = gsap.timeline();
+
+        master.add(stopTrigger());
 
         return () => clearInterval(interval);
     }, []);
@@ -31,7 +69,8 @@ const Home = () => {
         <Head>
             <title>Wlodev - JS Dev | Jakub Wlodarczyk's Portfolio</title>
         </Head>
-        <header className={s.header}>
+        <div className={s.header__bg} ref={headerBg}></div>
+        <header className={s.header} id="main-header" ref={headerRef}>
             <div className="container">
                 <div className={s.header__centerbox}>
                     <div className="boxhead">
@@ -77,7 +116,7 @@ const Home = () => {
                 </div>
             </div>
         </header>
-        {/* <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> */}
+        <About header={headerRef}/>
         <Technologies/>
         <Contact/>
         </>
