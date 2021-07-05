@@ -67,7 +67,7 @@ const Home = () => {
     return (
         <>
         <Head>
-            <title>Wlodev - JS Dev | Jakub Wlodarczyk's Portfolio</title>
+            <title>Wlodev - JS Dev | Jakub Wlodarczyk&apos;s Portfolio</title>
             <link rel="shortcut icon" href="img/assets/icon-white-gradient-bright.png"/>
         </Head>
         <div className={s.header__bg} ref={headerBg}></div>
