@@ -51,7 +51,7 @@ const Home = () => {
                 }
             })
 
-            tl.to(headerRef.current, { opacity: 0, scale: 0.8 });
+            tl.to(headerRef.current, { opacity: 0, scale: 0.87 });
             tl.to(headerBg.current, { opacity: 0 }).duration(0);
 
             return tl;
@@ -68,6 +68,7 @@ const Home = () => {
         <>
         <Head>
             <title>Wlodev - JS Dev | Jakub Wlodarczyk's Portfolio</title>
+            <link rel="shortcut icon" href="img/assets/icon-white-gradient-bright.png"/>
         </Head>
         <div className={s.header__bg} ref={headerBg}></div>
         <header className={s.header} id="main-header" ref={headerRef}>
