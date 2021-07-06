@@ -81,8 +81,8 @@ const Internalization = () => {
                 className={s.dropdown}
             >
                 <ul>
-                    {router.locales?.map((locale) => (
-                        <LanguageItem locale={locale}/>
+                    {router.locales?.map((locale, key) => (
+                        <LanguageItem locale={locale} key={key}/>
                     ))}
                 </ul> 
             </motion.div>
