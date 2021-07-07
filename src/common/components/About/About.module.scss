@@ -1,25 +1,39 @@
 @import '../../sass/global.scss';
 
 .wrap {
+    // background: red;
     background: #fff;
     padding-top: 10rem;
     padding-bottom: 10rem;
+
+    :global(.container) {
+        transform: translateY(-60px);
+    }
 }
 
 .wrapper {
     @include display-flex();
+    @include box-align(center);
 }
 
 .description {
-    width: calc(100% - 370px);
+    width: calc(100% - 470px);
+    margin-right: 100px;
 
     :global(.boxhead) {
         h2 {
-            color: #fff;
+            // color: #fff;
         }
     }
 }
 
 .memoji {
+    opacity: 0;
+    border-radius: 25px;
+    // border-radius: var(--border-radius);
+    // border-radius: 50%;
+    overflow: hidden;
+    transform: translate(20px);
+
     width: 370px;
 }

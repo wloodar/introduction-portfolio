@@ -16,7 +16,7 @@ const NavItem:React.FC<Props> = ({ anchor, itemName, classes }) => {
     }, [])
     
     return (
-        <Link activeClass="active" className={classes} to={anchor} spy={true} smooth={true} offset={-offset} duration={500}>
+        <Link className={classes} to={anchor} spy={true} smooth={true} offset={-offset} duration={500}>
             {itemName}
         </Link>
     )

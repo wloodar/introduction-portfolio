@@ -9,6 +9,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import s from './index.module.scss';
 
+import NavItem from '../common/components/NavItem/NavItem';
+
 import About from '../common/components/About/About';
 import Technologies from '../common/components/Technologies/Technologies';
 import Contact from '../modules/contact/contact';
@@ -94,7 +96,7 @@ const Home = () => {
                     </div>
                     <p>{t('common:Present yourself or')}</p>
                     <p>{t('common:Unveil your idea')}.</p>
-                    <a href="#" className="btn btnPrimary">{t('common:Explore')}</a>
+                    <NavItem anchor="about" itemName={t('common:Explore')} classes="btn btnPrimary" />
                 </div>
                 <div className={cs(s.header__scroll, isTransitioning ? s.header__animation : undefined)}>
                     <p>Scroll</p>
