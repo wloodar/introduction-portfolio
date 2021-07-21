@@ -96,7 +96,7 @@ const Home = () => {
                     </div>
                     <p>{t('common:Present yourself or')}</p>
                     <p>{t('common:Unveil your idea')}.</p>
-                    <NavItem anchor="about" itemName={t('common:Explore')} classes="btn btnPrimary" />
+                    <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary" />
                 </div>
                 <div className={cs(s.header__scroll, isTransitioning ? s.header__animation : undefined)}>
                     <p>Scroll</p>
