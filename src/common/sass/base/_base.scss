@@ -53,6 +53,9 @@ button {
 input, button, select, textarea {
     outline: 0;
     font-family: $font-primary;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 ul {
