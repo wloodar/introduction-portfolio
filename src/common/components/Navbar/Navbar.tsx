@@ -30,6 +30,10 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     });
 
+    const toggleMenu = () => {
+        setNavOpen(!navOpen);
+    }
+
     return (
         <nav className={cs(s.nav, navbarShadow ? s.nav__shadow : null )}>
             <div className="container">
@@ -38,26 +42,33 @@ const Navbar = () => {
                         <img src="/img/logo/wlodev-black-transparent.png" alt="" />
                     </a>
                 </div>
-                <div className={s.mobileIcon}>
-                    <label htmlFor="check">
-                        <input type="checkbox" id="check" onClick={() => setNavOpen(!navOpen)}/> 
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
+                <div className={s.mobileRight}>
+                    <div className={s.mobileIcon}>
+                        <label htmlFor="check">
+                            <input type="checkbox" id="check" onClick={() => setNavOpen(!navOpen)} checked={navOpen}/> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                    <div className={s.mobileInternationalization}>
+                        <Internationalization/>
+                    </div>
                 </div>
-                <span className={s.mobile} style={ navOpen ? { visibility: 'visible', opacity: '1' } : undefined }>
-                    <div className={s.list}>
-                        <NavList/>
-                    </div>
-                    <div className={s.right}>
-                        <div className={s.lang}>
-                            <Internationalization/>
+                <span className={s.mobile} style={ navOpen ? { visibility: 'visible', opacity: '1' } : undefined } onClick={() => toggleMenu()}>
+                    <span className={s.mobileBox}>
+                        <div className={s.list}>
+                            <NavList/>
                         </div>
-                        <div className={s.action}>
-                            <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
+                        <div className={s.right}>
+                            <div className={s.lang}>
+                                <Internationalization/>
+                            </div>
+                            <div className={s.action}>
+                                <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
+                            </div>
                         </div>
-                    </div>
+                    </span>
                 </span>
             </div>
         </nav>

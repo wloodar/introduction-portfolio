@@ -32,12 +32,26 @@
     position: absolute;
     @include absoluteCenter;
 
+    @include respond(tab-port) {
+        position: relative;
+        top: unset;
+
+    }
+
     ul {
         li {
             display: inline-block;
             
             &:not(:first-child) {
                 padding-left: 2.7rem;
+            }
+
+            @include respond(tab-port) {
+                display: block;
+                
+                &:not(:first-child) {
+                    padding-left: 0;
+                }
             }
 
             a {
@@ -69,20 +83,43 @@
     }
 }
 
+.mobileRight {
+    @include display-flex();
+    @include box-align(center);
+}
+
 .mobile {
-    position: absolute;
-    background: rgba($color: #fff, $alpha: .87);
-    top: 63px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: calc(100vh - 63px);
-    visibility: hidden;
-    opacity: 0;
-    @include transition(.5s opacity cubic-bezier(0.68, -0.6, 0.32, 1.6));
+    @include respond(tab-port) {
+        position: absolute;
+        background: rgba($color: #fff, $alpha: .87);
+        top: 78px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: calc(100vh - 78px);
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.5s opacity cubic-bezier(0.68, -0.6, 0.32, 1.6));
+
+        .lang {
+            display: none;
+        }
+    }
+}
+
+.mobileBox {
+    @include respond(tab-port) {
+        @include absoluteCenter();        
+    }
 }
 
 .mobileIcon {
+    display: none;
+    margin-right: 2.4rem;
+
+    @include respond(tab-port) {
+        display: block;
+    }
 
     label {
         @include display-flex();
@@ -119,7 +156,6 @@
         input {
             &[type="checkbox"]:checked ~ span:nth-of-type(1){
                 transform-origin: bottom;
-                // transform: rotatez(45deg) translate(8px,10px);
                 transform: rotatez(45deg) translate(9px, 11px);
             }
             
@@ -131,7 +167,6 @@
             &[type="checkbox"]:checked ~ span:nth-of-type(3){
                 transform-origin: bottom;
                 width: 50%;
-                // transform: translate(-11px, -15px) rotatez(45deg);
                 transform: translate(-14px, -17px) rotatez(45deg);
             }     
         }
