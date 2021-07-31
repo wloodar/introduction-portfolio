@@ -154,6 +154,8 @@
         }
 
         input {
+            outline: none;
+
             &[type="checkbox"]:checked ~ span:nth-of-type(1){
                 transform-origin: bottom;
                 transform: rotatez(45deg) translate(9px, 11px);
