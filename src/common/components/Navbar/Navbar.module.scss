@@ -71,19 +71,23 @@
 
 .mobile {
     position: absolute;
-    background: #fff;
-    top: 100px;
+    background: rgba($color: #fff, $alpha: .87);
+    top: 63px;
     right: 0;
     left: 0;
-    display: none;
+    bottom: 0;
+    height: calc(100vh - 63px);
+    visibility: hidden;
+    opacity: 0;
+    @include transition(.5s opacity cubic-bezier(0.68, -0.6, 0.32, 1.6));
 }
 
 .mobileIcon {
 
-    label{
+    label {
         @include display-flex();
         flex-direction: column;
-        width: 30px;
+        width: 34px;
         cursor:pointer;
 
         span {
@@ -91,7 +95,7 @@
             border-radius: 10px;
             height: 3px;
             margin: 3px 0;
-            transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            @include transition(.4s cubic-bezier(0.68, -0.6, 0.32, 1.6));
 
             &:nth-of-type(1) {
                 width: 50%;
@@ -115,7 +119,8 @@
         input {
             &[type="checkbox"]:checked ~ span:nth-of-type(1){
                 transform-origin: bottom;
-                transform: rotatez(45deg) translate(8px,10px);
+                // transform: rotatez(45deg) translate(8px,10px);
+                transform: rotatez(45deg) translate(9px, 11px);
             }
             
             &[type="checkbox"]:checked ~ span:nth-of-type(2){
@@ -126,7 +131,8 @@
             &[type="checkbox"]:checked ~ span:nth-of-type(3){
                 transform-origin: bottom;
                 width: 50%;
-                transform: translate(-11px, -15px) rotatez(45deg);
+                // transform: translate(-11px, -15px) rotatez(45deg);
+                transform: translate(-14px, -17px) rotatez(45deg);
             }     
         }
     }

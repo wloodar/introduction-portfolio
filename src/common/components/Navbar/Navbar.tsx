@@ -13,6 +13,7 @@ import Internationalization from '../../../modules/internationalization/internat
 const Navbar = () => {
 
     const [navbarShadow, setNavbarShadow] = useState(false);
+    const [navOpen, setNavOpen] = useState(false);
     const { t } = useTranslation();
 
     const handleScroll = () => {
@@ -39,13 +40,13 @@ const Navbar = () => {
                 </div>
                 <div className={s.mobileIcon}>
                     <label htmlFor="check">
-                        <input type="checkbox" id="check"/> 
+                        <input type="checkbox" id="check" onClick={() => setNavOpen(!navOpen)}/> 
                         <span></span>
                         <span></span>
                         <span></span>
                     </label>
                 </div>
-                <span className={s.mobile}>
+                <span className={s.mobile} style={ navOpen ? { visibility: 'visible', opacity: '1' } : undefined }>
                     <div className={s.list}>
                         <NavList/>
                     </div>
