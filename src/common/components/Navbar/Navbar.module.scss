@@ -21,11 +21,6 @@
     }
 }
 
-.left {
-    @include display-flex();
-    @include box-align(center);
-}
-
 .logo {
     img {
         width: auto;
@@ -34,12 +29,16 @@
 }
 
 .list {
-    margin-left: var(--p-1);
+    position: absolute;
+    @include absoluteCenter;
 
     ul {
         li {
             display: inline-block;
-            padding-left: 2.7rem;
+            
+            &:not(:first-child) {
+                padding-left: 2.7rem;
+            }
 
             a {
                 font-size: 1.65rem;
@@ -58,6 +57,7 @@
 
     a {
         display: block;
+        padding: 12px 34px;
     }
 }
 
@@ -66,5 +66,68 @@
 
     button {
         font-weight: 500;
+    }
+}
+
+.mobile {
+    position: absolute;
+    background: #fff;
+    top: 100px;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.mobileIcon {
+
+    label{
+        @include display-flex();
+        flex-direction: column;
+        width: 30px;
+        cursor:pointer;
+
+        span {
+            background: #111;
+            border-radius: 10px;
+            height: 3px;
+            margin: 3px 0;
+            transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+            &:nth-of-type(1) {
+                width: 50%;
+                margin-left: auto;
+            }
+
+            &:nth-of-type(2) {
+                width: 100%;
+            }
+
+            &:nth-of-type(3) {
+                width: 75%;
+                margin-left: auto;
+            }
+            
+            &[type="checkbox"] {
+                display: none;
+            }
+        }
+
+        input {
+            &[type="checkbox"]:checked ~ span:nth-of-type(1){
+                transform-origin: bottom;
+                transform: rotatez(45deg) translate(8px,10px);
+            }
+            
+            &[type="checkbox"]:checked ~ span:nth-of-type(2){
+                transform-origin: top;
+                transform: rotatez(-45deg)
+            }
+
+            &[type="checkbox"]:checked ~ span:nth-of-type(3){
+                transform-origin: bottom;
+                width: 50%;
+                transform: translate(-11px, -15px) rotatez(45deg);
+            }     
+        }
     }
 }

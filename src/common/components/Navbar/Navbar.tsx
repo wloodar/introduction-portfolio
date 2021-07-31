@@ -32,24 +32,32 @@ const Navbar = () => {
     return (
         <nav className={cs(s.nav, navbarShadow ? s.nav__shadow : null )}>
             <div className="container">
-                <div className={s.left}>
-                    <div className={s.logo}>
-                        <a onClick={() => animateScroll.scrollToTop()}>
-                            <img src="/img/logo/wlodev-black-transparent.png" alt="" />
-                        </a>
-                    </div>
+                <div className={s.logo}>
+                    <a onClick={() => animateScroll.scrollToTop()}>
+                        <img src="/img/logo/wlodev-black-transparent.png" alt="" />
+                    </a>
+                </div>
+                <div className={s.mobileIcon}>
+                    <label htmlFor="check">
+                        <input type="checkbox" id="check"/> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <span className={s.mobile}>
                     <div className={s.list}>
                         <NavList/>
                     </div>
-                </div>
-                <div className={s.right}>
-                    <div className={s.lang}>
-                        <Internationalization/>
+                    <div className={s.right}>
+                        <div className={s.lang}>
+                            <Internationalization/>
+                        </div>
+                        <div className={s.action}>
+                            <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
+                        </div>
                     </div>
-                    <div className={s.action}>
-                        <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
-                    </div>
-                </div>
+                </span>
             </div>
         </nav>
     )
