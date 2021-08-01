@@ -84,14 +84,18 @@
 }
 
 .mobileRight {
-    @include display-flex();
-    @include box-align(center);
+    display: none;
+
+    @include respond(tab-port) {
+        @include display-flex();
+        @include box-align(center);
+    }
 }
 
 .mobile {
     @include respond(tab-port) {
         position: absolute;
-        background: rgba($color: #fff, $alpha: .87);
+        background: rgba($color: #fff, $alpha: .94);
         top: 78px;
         right: 0;
         left: 0;
@@ -99,10 +103,25 @@
         height: calc(100vh - 78px);
         visibility: hidden;
         opacity: 0;
-        @include transition(.5s opacity cubic-bezier(0.68, -0.6, 0.32, 1.6));
+        @include transition(.5s all cubic-bezier(0.68, -0.6, 0.32, 1.6));
 
         .lang {
             display: none;
+        }
+
+        .list {
+            text-align: center;
+            
+            ul {
+                li {
+                    margin-bottom: 2.7rem;
+
+                    a {
+                        font-size: 2.3rem;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }
@@ -114,12 +133,7 @@
 }
 
 .mobileIcon {
-    display: none;
     margin-right: 2.4rem;
-
-    @include respond(tab-port) {
-        display: block;
-    }
 
     label {
         @include display-flex();
@@ -156,6 +170,7 @@
         input {
             outline: none;
             border: 0;
+            height: 0;
 
             &[type="checkbox"]:checked ~ span:nth-of-type(1){
                 transform-origin: bottom;

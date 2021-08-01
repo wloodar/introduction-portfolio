@@ -23,10 +23,20 @@
     &__inner {
         background: var(--color-white);
         border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+        @include respond(phone) {
+            border-radius: 21px 21px 0 0;
+        }
     }
 
     & > :global(.boxhead) {
         padding-bottom: 47px;
+    }
+
+    :global(.container) {
+        @include respond(phone) {
+            padding: 0;
+        }
     }
 
     :global(.s-container) {
@@ -35,6 +45,11 @@
         @include flex-justify-content(space-between);
         padding-top: 75px;
         padding-bottom: 75px;
+
+        @include respond(phone) {
+            display: block;
+            text-align: center;
+        }
     }
 
     &__row {
@@ -53,6 +68,10 @@
 
     &__graphic {
         width: 290px;
+
+        @include respond(phone) {
+            margin: 8.4rem auto 0;
+        }
     }
 
     &__memoji {

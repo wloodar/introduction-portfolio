@@ -1,5 +1,11 @@
 .center {
     text-align: center;
+
+    .icon {
+        @include respond(phone) { 
+            margin: 1.8rem auto 0;
+        }
+    }
 }
 
 .flex-center {

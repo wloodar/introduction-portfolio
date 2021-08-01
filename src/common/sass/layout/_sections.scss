@@ -28,9 +28,17 @@
         @include display-flex();
         @include box-align(center);
 
+        @include respond(phone) { 
+            display: block;    
+        }
+
         .icon {
             margin-left: 1.7rem;
             width: 4.2rem;
+
+            @include respond(tab-port) {
+                margin-top: 3.4rem;
+            }
         }
     }
 }
@@ -39,5 +47,9 @@
     p {
         font-size: 2.45rem;
         line-height: 1.7;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
 }

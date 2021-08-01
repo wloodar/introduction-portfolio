@@ -13,6 +13,10 @@
     @include display-flex();
     @include box-align(center);
     @include flex-justify-content(space-between);
+
+    @include respond(tab-port) {
+        display: block;
+    }
 }
 
 .logo {
@@ -24,10 +28,27 @@
 }
 
 .list {
+
+    @include respond(tab-port) {
+        margin-top: 6.4rem;
+    }
+    
     ul {
         li {
             display: inline-block;
-            padding-left: 2.7rem;
+            
+            &:not(:first-child) {
+                padding-left: 2.7rem;
+            }
+
+            @include respond(phone) { 
+                display: block;
+
+                &:not(:first-child) {
+                    padding-left: 0;
+                    padding-top: 2.7rem;
+                }
+            }
 
             a {
                 font-size: 1.45rem;
@@ -48,4 +69,16 @@
     color: #616161;
     font-size: 1.4rem;
     font-weight: 500;
+
+    @include respond(phone) {
+        display: block;
+
+        span {
+            display: block;
+
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+        }
+    }
 }
