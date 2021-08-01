@@ -8,6 +8,14 @@
     margin-bottom: 10vh;
     // z-index: -1;
 
+    @include respond(tab-port) {
+        padding-top: 20vh;
+    }
+
+    @media screen and (max-width: 30em) {
+        padding-top: 10rem;
+    }
+
     &__bg {
         position: absolute;
         top: 0; height: 100vh; right: 0; left: 0;
@@ -28,9 +36,34 @@
         bottom: 2%;
         transform: rotate(-17deg);
 
+        @include respond(tab-port) {
+            bottom: 0;
+        }
+
+        @media screen and (max-width: 43.75em) {
+            // display: none;
+            @include transform(none);
+            text-align: center;
+            right: 0;
+            bottom: -360px;
+        }
+
         img {
             width: 300px;
             @include createTransition(3s, ease);
+
+            @include respond(tab-land) {
+                width: 240px;
+            }
+
+            @include respond(tab-port) {
+                width: 200px;
+            }
+
+            @media screen and (max-width: 43.75em) {
+                width: 300px;
+                transform: translateY(0) !important;
+            }
         }
     }
 
@@ -40,9 +73,21 @@
         bottom: 5%;
         transform: rotate(15deg);
 
+        @include respond(tab-port) {
+            bottom: 2%;
+        }
+
+        @media screen and (max-width: 43.75em) {
+            display: none;
+        }
+
         img {
             width: 220px;
             @include createTransition(3s, ease);
+
+            @include respond(tab-land) {
+                width: 180px;
+            }
         }
     }
 
@@ -51,9 +96,32 @@
         // top: 45%;
         text-align: center;
 
+        :global(.boxhead) {
+            height: 140px;
+            margin-bottom: 1.5rem;
+
+            // 700 px
+            @media screen and (max-width: 43.75em) {
+                // height: 200px;
+                height: auto;
+                // @include display-flex();
+                // @include box-align(center);
+                // @include flex-justify-content(center);
+            }
+        }
+
         h1 {
             font-size: 5.7rem;
             color: #111;
+
+            @media screen and (max-width: 43.75em) {
+                font-size: 5rem;
+            }
+
+            // 480px
+            @media screen and (max-width: 30em) {
+                font-size: 4.3rem;
+            }
 
             :global(.Typewriter) {
                 display: inline-block;
@@ -69,12 +137,20 @@
             font-size: 2.2rem;
             font-weight: 400;
             padding-top: .7rem;
+
+            @media screen and (max-width: 30em) {
+                font-size: 1.8rem;
+            }
         }
 
         a {
             display: inline-block;
             margin-top: 2.4rem;
             font-size: 1.6rem;
+
+            @media screen and (max-width: 30em) {
+                font-size: 1.5rem;
+            }
         }
     }
 

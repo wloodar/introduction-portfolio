@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useLayoutEffect, useEffect, useState, useRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -32,10 +32,23 @@ import PointerEmoji from '../../public/img/icons/white-down-pointing-backhand-in
 const Home = () => {
 
     const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+    const [windowWidth, setWindowWidth] = useState<Number>(0);
     const [tl, setTl]: any = useState();
     const headerRef = useRef<HTMLElement>(null);
     const headerBg = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
+
+    useLayoutEffect(() => {
+        function updateSize() {
+            setWindowWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', updateSize);
+
+        updateSize();
+
+        return () => window.removeEventListener('resize', updateSize);
+    })
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -78,20 +91,24 @@ const Home = () => {
                 <div className={s.header__centerbox}>
                     <div className="boxhead">
                         <h1>
-                            {t('common:Your')} 
-                            <Typewritter
-                                options={{
-                                    autoStart: true,
-                                    loop: true,
-                                    delay: 40,
-                                    strings: [
-                                        `\u00A0${t('common:beauteous')}`,
-                                        `\u00A0${t('common:mind-blowing')}`,
-                                        `. ${t('common:Simply your')}`
-                                    ],
-                                }}
-                            />
-                            <span className="block">{t('common:website')}.</span>
+                            {windowWidth > 480 ? 
+                                <>
+                                    {t('common:Your')} 
+                                    <Typewritter
+                                        options={{
+                                            autoStart: true,
+                                            loop: true,
+                                            delay: 40,
+                                            strings: [
+                                                `\u00A0${t('common:beauteous')}`,
+                                                `\u00A0${t('common:mind-blowing')}`,
+                                                `. ${t('common:Simply your')}`
+                                            ],
+                                        }}
+                                    />
+                                    <span className="block">{t('common:website')}.</span>
+                                </>
+                            : "Twoja strona. Nowoczesna & Szybka"}
                         </h1>
                     </div>
                     <p>{t('common:Present yourself or')}</p>
