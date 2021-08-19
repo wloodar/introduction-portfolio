@@ -13,6 +13,7 @@ import NavItem from '../common/components/NavItem/NavItem';
 
 import About from '../common/components/About/About';
 import Technologies from '../common/components/Technologies/Technologies';
+import Realizations from '../common/components/Realizations/Realizations';
 import Contact from '../modules/contact/contact';
 
 import LampypolskaMockup from '../../public/img/works/lampypolska-mockup.png';
@@ -138,6 +139,7 @@ const Home = () => {
         </header>
         <About header={headerRef}/>
         <Technologies/>
+        <Realizations/>
         <Contact/>
         </>
     )

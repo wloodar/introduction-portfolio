@@ -41,6 +41,15 @@
             }
         }
     }
+
+    &__subtitle {
+        p {
+            padding-top: .8rem;
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #717171;
+        }
+    }
 }
 
 .bsP {

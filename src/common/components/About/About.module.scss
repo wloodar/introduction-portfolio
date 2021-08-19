@@ -1,10 +1,8 @@
 @import '../../sass/global.scss';
 
 .wrap {
-    // background: red;
     background: #fff;
     padding-top: 10rem;
-    padding-bottom: 10rem;
 
     :global(.container) {
         transform: translateY(-60px);
