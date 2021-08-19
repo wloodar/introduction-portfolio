@@ -22,6 +22,10 @@
         font-size: 4.7rem;
         font-weight: 700;
         color: var(--color-dark);
+
+        @include respond(phone) {
+            font-size: 3.6rem;
+        }
     }
 
     &__icon {
@@ -48,6 +52,10 @@
             font-size: 1.7rem;
             font-weight: 500;
             color: #717171;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
         }
     }
 }
