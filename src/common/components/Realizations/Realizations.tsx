@@ -53,7 +53,7 @@ const Realizations = () => {
                                     <div className={s.info}>
                                         <h3>{val.title}</h3>
                                         <p>{val.description}</p>
-                                        <a href={val.demo_link} className="btn" target="_blank">
+                                        <a href={val.demo_link} className="btn btnPrimary" target="_blank">
                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xmlSpace="preserve"><g>	<g>		<g>			<polygon points="53,56 8,56 8,11 30,11 30,3 0,3 0,64 61,64 61,34 53,34 			"/>		</g>	</g>	<g>		<g>			<polygon points="42,0 50,8 33,25 39,31 56,14 64,23 64,0 			"/>		</g>	</g></g></svg>
                                             {t('common:Open website')}
                                         </a>

@@ -15,7 +15,6 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const wrapRef = useRef<HTMLDivElement>(null);
     const descRef = useRef<HTMLDivElement>(null);
-    const picRef = useRef<htmld>(null);
 
     const { t } = useTranslation();
 
@@ -32,10 +31,9 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
                 }
             })
 
-            tl.to(sectionRef.current, { y: header.current?.clientHeight === undefined ? -200 : - header.current?.clientHeight! });
-            tl.to(wrapRef.current, { translateY: 0 });
-            tl.fromTo(descRef.current, { translateY: -30 }, { translateY: 0 });
-            tl.to(picRef.current, { opacity: 1, translateY: 0 }, { duration: 0.5 });
+            // tl.to(sectionRef.current, { y: header.current?.clientHeight === undefined ? -200 : - header.current?.clientHeight! });
+            // tl.to(wrapRef.current, { translateY: 0 });
+            // tl.fromTo(descRef.current, { translateY: -30 }, { translateY: 0 });
             // tl.to(sectionRef.current, { background: "#000" });
 
             return tl;
@@ -54,23 +52,20 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
                     {/* <FadeInComponent> */}
                         <div className={s.wrapper}>
                             <div className={s.description} ref={descRef}>
-                                <div className="boxhead boxhead__icon">
-                                    <h2>{t('common:Hello there, my name is')}</h2>
-                                    <div className="icon">
+                                <div className="boxhead">
+                                    <h2>{t('common:Hello there, my name is')} ...</h2>
+                                    {/* <div className="icon">
                                         <Image
                                             src={WavingHand}
                                             alt="Hand Emoji"
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="bsP">
                                     <p>I już od kilku lat pasjonuje mnie programowanie. Projektowanie i tworzenie nowych witryn internetowych czy aplikacji internetowych jest dla mnie niesamowitą przygodą i przyjemnością. Uwielbiam poszerzać swoje horyzonty i stawiać czoła nowym wyzwaniom.</p>
                                 </div>
-                                {/* <div className="boxhead">
-                                    <h2>{t('common:Hello there, my name is')}</h2>
-                                </div> */}
                             </div>
-                            <div className={s.memoji} ref={picRef}>
+                            <div className={s.memoji}>
                                 <Image
                                     src={MePic}
                                     alt="My memoji"

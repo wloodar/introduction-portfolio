@@ -2,10 +2,11 @@
 
 .wrap {
     background: #fff;
-    padding-top: 10rem;
+    margin-bottom: 20rem;
+    // padding-top: 10rem;
 
     :global(.container) {
-        transform: translateY(-60px);
+        // transform: translateY(-60px);
     }
 }
 
@@ -35,10 +36,8 @@
 }
 
 .memoji {
-    opacity: 0;
     border-radius: 25px;
     overflow: hidden;
-    transform: translate(20px);
     width: 370px;
 
     @include respond(tab-port) {

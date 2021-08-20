@@ -10,6 +10,13 @@
         li {
             margin-top: 8.4rem;
 
+            @include respond(tab-port) {
+
+                &:first-of-type {
+                    margin-top: 4.2rem;
+                }
+            }
+
             h3 {
                 font-size: 2.5rem;
                 color: var(--color-dark);
@@ -25,12 +32,17 @@
     @include display-flex();
     @include box-align(center);
 
+    background: #f9f9f9;
+    padding: 2.7rem 3.4rem;
+    border-radius: var(--border-radius);
+
     @include respond(tab-land) {
         $pic_size: 500px;
     }
 
     @include respond(tab-port) {
         flex-direction: column-reverse;
+        padding: 2.7rem 2.5rem;
     }
 
     .info {
@@ -55,11 +67,12 @@
         a {
             display: inline-block;
             margin-top: 2rem;
-            background: var(--color-primary-bright);
+            // background: var(--color-primary-bright);
             @include transition(.4s ease all);
+            padding: 1rem 2rem;
 
             &:hover {
-                background: darken($color: #f1f9fa, $amount: 4%);
+                // background: darken($color: #f1f9fa, $amount: 4%);
             }
         
             svg {
@@ -67,6 +80,7 @@
                 height: 14px;
                 margin-right: 10px;
                 margin-bottom: -2px;
+                fill: #fff;
             }
         }
     }
@@ -79,8 +93,9 @@
         }
 
         img {
-            border-radius: 12px;
-            border: 5px solid var(--color-gray-dark);
+            border-radius: var(--border-radius);
+            border: 3px solid #f6f6f6;
+            // border: 5px solid var(--color-gray-dark);
         }
     }
 }
