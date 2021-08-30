@@ -63,12 +63,6 @@ const Contact = () => {
             <div className="s-container" id="contact">
                 <div className="boxhead boxhead__icon center flex-center">
                     <h2>{t('common:In touch?')}</h2>
-                    <div className="icon">
-                        <Image
-                            src={ContactMeHand}
-                            alt="Hand Emoji"
-                        />
-                    </div>
                 </div>
                 <form className={s.contactForm} onSubmit={submitContactForm}>
                     <div className="formGroup">
@@ -111,10 +105,6 @@ const Contact = () => {
             </div>
         </FadeInComponent>
         <div className={s.contactDetails}>
-            <div className="boxhead center">
-                {/* <h2>{t('common:In touch?')}</h2> */}
-                <h2>{t('common:Last scroll')}</h2>
-            </div>
             <div className="container">
                 <div className={s.contactDetails__inner}>
                     <FadeInComponent>
