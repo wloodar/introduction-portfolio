@@ -48,6 +48,11 @@
         flex: 0 0 calc(33% - 50px);
 
         @include respond(phone) {
+            margin: 10px 25px 30px;
+            flex: 0 calc(50% - 50px);
+        }
+
+        @media screen and (max-width: 25em) {
             margin: 10px 15px 30px;
             flex: 0 calc(50% - 30px);
         }
@@ -61,7 +66,10 @@
     padding: 40px;
     box-sizing: border-box;
 
-    @include respond(phone) {
+    // @include respond(phone) {
+    //     padding: 25px;
+    // }
+    @media screen and (max-width: 25em) {
         padding: 25px;
     }
 
