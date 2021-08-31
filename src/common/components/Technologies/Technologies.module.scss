@@ -1,4 +1,25 @@
 .root {
     background: #0a0a0a;
-    height: 900px;
+    height: 600px;
+}
+
+.header {
+    padding-top: 100px;
+
+    h2 {
+        color: #fff;
+    }
+
+    p {
+        padding-top: 1.7rem;
+        font-size: 2rem;
+        line-height: 1.7;
+        color: #eee;
+        width: 40rem;
+        margin: auto;
+    }
+}
+
+.slide {
+    color: #fff;
 }

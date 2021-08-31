@@ -21,7 +21,8 @@ const NavList = () => {
         },
         {
             anchor: "realizations",
-            name: t('common:My realizations')
+            name: "Wykonane projekty"
+            // name: t('common:My realizations')
         },
         {
             anchor: "contact",

@@ -31,6 +31,12 @@ const realizationsList: realizations[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
         pic_dest: '/img/realizations/polerowanieal.png',
         demo_link: "https://polerowanieal.pl/"
+    },
+    {
+        title: "Wizytówka ELCO",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
+        pic_dest: '/img/realizations/elco-lampy-ceramiczne.png',
+        demo_link: "https://lampyceramiczne.pl/"
     }
 ]
 
@@ -42,7 +48,8 @@ const Realizations = () => {
         <div className="container" id="realizations">
             <div className={s.wrap}>
                 <div className="boxhead boxhead__subtitle">
-                    <h2>{t('common:My realizations')}</h2>
+                    {/* <h2>{t('common:My realizations')}</h2> */}
+                    <h2>Wykonane projekty</h2>
                     <p>Sklep internetowy, wizytówka? A może portal?</p>
                 </div>
                 <div className={s.list}>
