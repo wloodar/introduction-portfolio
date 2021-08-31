@@ -3,6 +3,11 @@
 .root {
     background: #0a0a0a;
     padding-bottom: 150px;
+
+    @include respond(phone) {
+        margin-top: -100px;
+        padding-bottom: 60px;
+    }
 }
 
 .header {

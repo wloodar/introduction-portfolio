@@ -53,30 +53,30 @@ const Home = () => {
     })
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIsTransitioning(isTransitioning => !isTransitioning);
-        }, 1000);
+        // const interval = setInterval(() => {
+        //     setIsTransitioning(isTransitioning => !isTransitioning);
+        // }, 1000);
 
-        const stopTrigger = () => {
-            const tl = gsap.timeline({
-                delay: 1,
-                scrollTrigger: {
-                    trigger: headerRef.current,
-                    start: "top top",
-                    pin: true,
-                    scrub: true,
-                }
-            })
+        // const stopTrigger = () => {
+        //     const tl = gsap.timeline({
+        //         delay: 1,
+        //         scrollTrigger: {
+        //             trigger: headerRef.current,
+        //             start: "top top",
+        //             pin: true,
+        //             scrub: true,
+        //         }
+        //     })
 
-            tl.to(headerRef.current, { opacity: 0, scale: 0.87 });
-            tl.to(headerBg.current, { opacity: 0 }).duration(0);
+        //     tl.to(headerRef.current, { opacity: 0, scale: 0.87 });
+        //     tl.to(headerBg.current, { opacity: 0 }).duration(0);
 
-            return tl;
-        }
+        //     return tl;
+        // }
 
-        const master = gsap.timeline();
+        // const master = gsap.timeline();
 
-        master.add(stopTrigger());
+        // master.add(stopTrigger());
 
         return () => clearInterval(interval);
     }, []);

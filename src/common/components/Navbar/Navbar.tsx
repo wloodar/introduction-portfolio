@@ -51,9 +51,9 @@ const Navbar = () => {
                             <span></span>
                         </label>
                     </div>
-                    <div className={s.mobileInternationalization}>
+                    {/* <div className={s.mobileInternationalization}>
                         <Internationalization/>
-                    </div>
+                    </div> */}
                 </div>
                 <span className={s.mobile} style={ navOpen ? { visibility: 'visible', opacity: '1' } : undefined } onClick={() => toggleMenu()}>
                     <span className={s.mobileBox}>
@@ -61,9 +61,9 @@ const Navbar = () => {
                             <NavList/>
                         </div>
                         <div className={s.right}>
-                            <div className={s.lang}>
+                            {/* <div className={s.lang}>
                                 <Internationalization/>
-                            </div>
+                            </div> */}
                             <div className={s.action}>
                                 <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
                             </div>

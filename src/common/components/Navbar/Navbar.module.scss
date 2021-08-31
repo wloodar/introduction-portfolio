@@ -71,7 +71,8 @@
 
     a {
         display: block;
-        padding: 12px 34px;
+        text-align: center;
+        // padding: 12px 34px;
     }
 }
 
@@ -96,7 +97,8 @@
     @include respond(tab-port) {
         position: absolute;
         background: rgba($color: #fff, $alpha: .94);
-        top: 78px;
+        // top: 78px;
+        top: 63px;
         right: 0;
         left: 0;
         bottom: 0;
@@ -133,7 +135,7 @@
 }
 
 .mobileIcon {
-    margin-right: 2.4rem;
+    // margin-right: 2.4rem;
 
     label {
         @include display-flex();

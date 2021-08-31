@@ -3,6 +3,10 @@
 .wrap {
     margin-top: 10rem;
     margin-bottom: 10rem;
+
+    @include respond(phone) {
+        margin-bottom: 7rem;
+    }
 }
 
 .list {

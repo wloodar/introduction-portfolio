@@ -46,7 +46,7 @@ const Technologies = () => {
                     <p>Lista technologii, z których korzystam i wykorzystuje do moich realizacji.</p>
                 </div>
                 </FadeInComponent>
-                <FadeInComponent>
+                {/* <FadeInComponent> */}
 
                     <div className={s.techsContainer}>
                         <ul className={s.list}>
@@ -55,7 +55,7 @@ const Technologies = () => {
                             )}
                         </ul>
                     </div>
-                </FadeInComponent>
+                {/* </FadeInComponent> */}
             </div>
             
                 

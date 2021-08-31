@@ -20,28 +20,28 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
 
     useEffect(() => {
 
-        const stopTrigger = () => {
-            const tl = gsap.timeline({
-                delay: 1,
-                scrollTrigger: {
-                    trigger: header.current,
-                    start: "top top",
-                    pin: true,
-                    scrub: true,
-                }
-            })
+        // const stopTrigger = () => {
+        //     const tl = gsap.timeline({
+        //         delay: 1,
+        //         scrollTrigger: {
+        //             trigger: header.current,
+        //             start: "top top",
+        //             pin: true,
+        //             scrub: true,
+        //         }
+        //     })
 
-            // tl.to(sectionRef.current, { y: header.current?.clientHeight === undefined ? -200 : - header.current?.clientHeight! });
-            // tl.to(wrapRef.current, { translateY: 0 });
-            // tl.fromTo(descRef.current, { translateY: -30 }, { translateY: 0 });
-            // tl.to(sectionRef.current, { background: "#000" });
+        //     // tl.to(sectionRef.current, { y: header.current?.clientHeight === undefined ? -200 : - header.current?.clientHeight! });
+        //     // tl.to(wrapRef.current, { translateY: 0 });
+        //     // tl.fromTo(descRef.current, { translateY: -30 }, { translateY: 0 });
+        //     // tl.to(sectionRef.current, { background: "#000" });
 
-            return tl;
-        }
+        //     return tl;
+        // }
 
-        const master = gsap.timeline();
+        // const master = gsap.timeline();
 
-        master.add(stopTrigger());
+        // master.add(stopTrigger());
 
     }, [])
 
@@ -49,7 +49,7 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
         <div className="scroll" ref={sectionRef}>
             <section className={s.wrap}>
                 <div className="container" ref={wrapRef} id="about" >
-                    {/* <FadeInComponent> */}
+                    <FadeInComponent>
                         <div className={s.wrapper}>
                             <div className={s.description} ref={descRef}>
                                 <div className="boxhead">
@@ -73,7 +73,7 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
                                 />
                             </div>
                         </div>
-                    {/* </FadeInComponent> */}
+                    </FadeInComponent>
                 </div>
             </section>
         </div>
