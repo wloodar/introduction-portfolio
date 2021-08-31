@@ -55,6 +55,12 @@
         @media screen and (max-width: 25em) {
             margin: 10px 15px 30px;
             flex: 0 calc(50% - 30px);
+
+            &:nth-child(3) {
+                .bubble {
+                    padding: 20px !important;
+                }
+            }
         }
     }
 }
@@ -70,7 +76,7 @@
     //     padding: 25px;
     // }
     @media screen and (max-width: 25em) {
-        padding: 25px;
+        padding: 35px;
     }
 
     svg {
