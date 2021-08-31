@@ -102,7 +102,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        height: calc(100vh - 78px);
+        height: calc(100vh - 63px);
         visibility: hidden;
         opacity: 0;
         @include transition(.5s all cubic-bezier(0.68, -0.6, 0.32, 1.6));

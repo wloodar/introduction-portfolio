@@ -17,6 +17,10 @@ const Navbar = () => {
     const { t } = useTranslation();
 
     const handleScroll = () => {
+        if (navOpen) {
+            toggleMenu();
+        }
+
         if (window.scrollY > 0) {
             setNavbarShadow(true);
         } else {
