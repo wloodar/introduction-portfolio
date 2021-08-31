@@ -1,6 +1,8 @@
+@import '../../sass/global.scss';
+
 .root {
     background: #0a0a0a;
-    height: 600px;
+    padding-bottom: 150px;
 }
 
 .header {
@@ -14,12 +16,57 @@
         padding-top: 1.7rem;
         font-size: 2rem;
         line-height: 1.7;
-        color: #eee;
-        width: 40rem;
+        color: #ccc;
+        max-width: 42rem;
         margin: auto;
     }
 }
 
 .slide {
     color: #fff;
+}
+
+.techsContainer {
+    margin-top: 60px;
+    // margin-left: -25px;
+    // margin-left: -60px;
+}
+
+.list {
+    max-width: 60rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // display: grid;
+    // grid-template-columns: 33% 33% 33%;
+
+    li {
+        // margin-left: 60px;
+        // margin-bottom: 50px;
+        margin: 10px 25px 50px;
+        flex: 0 0 calc(33% - 50px);
+
+        @include respond(phone) {
+            margin: 10px 15px 30px;
+            flex: 0 calc(50% - 30px);
+        }
+    }
+}
+
+.bubble {
+    width: 100%;
+    background: #181818;
+    border-radius: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+
+    @include respond(phone) {
+        padding: 25px;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
 }
