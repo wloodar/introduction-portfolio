@@ -2,6 +2,7 @@ import { useLayoutEffect, useEffect, useState, useRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import cs from 'classnames';
 import Typewritter from 'typewriter-effect';
 import gsap from 'gsap';
@@ -12,24 +13,19 @@ import s from './index.module.scss';
 import NavItem from '../common/components/NavItem/NavItem';
 
 import Layout from '../common/components/Layout/Layout';
-import About from '../common/components/About/About';
-import Technologies from '../common/components/Technologies/Technologies';
-import Realizations from '../common/components/Realizations/Realizations';
-import Contact from '../modules/contact/contact';
+// import About from '../common/components/About/About';
+// import Technologies from '../common/components/Technologies/Technologies';
+// import Realizations from '../common/components/Realizations/Realizations';
+// import Contact from '../modules/contact/contact';
 
 import LampypolskaMockup from '../../public/img/works/lampypolska-mockup.png';
 import SigmaMockup from '../../public/img/works/sigma-mockup.png';
 import PointerEmoji from '../../public/img/icons/white-down-pointing-backhand-index.png';
 
-// var action = gsap.timeline({
-        //     scrollTrigger: {
-        //       trigger: document.getElementById('main-header'),
-        //       pin: true,   
-        //       start: 'top top',
-        //       scrub: 0.3
-        //     },
-        //     defaults:{duration:3, ease:'none'}
-        //   })
+const About = dynamic(() => import('../common/components/About/About'))
+const Technologies = dynamic(() => import('../common/components/Technologies/Technologies'))
+const Realizations = dynamic(() => import('../common/components/Realizations/Realizations'))
+const Contact = dynamic(() => import('../modules/contact/contact'))
 
 const Home = () => {
 
@@ -56,27 +52,6 @@ const Home = () => {
         const interval = setInterval(() => {
             setIsTransitioning(isTransitioning => !isTransitioning);
         }, 1000);
-
-        // const stopTrigger = () => {
-        //     const tl = gsap.timeline({
-        //         delay: 1,
-        //         scrollTrigger: {
-        //             trigger: headerRef.current,
-        //             start: "top top",
-        //             pin: true,
-        //             scrub: true,
-        //         }
-        //     })
-
-        //     tl.to(headerRef.current, { opacity: 0, scale: 0.87 });
-        //     tl.to(headerBg.current, { opacity: 0 }).duration(0);
-
-        //     return tl;
-        // }
-
-        // const master = gsap.timeline();
-
-        // master.add(stopTrigger());
 
         return () => clearInterval(interval);
     }, []);

@@ -99,7 +99,22 @@
         img {
             border-radius: var(--border-radius);
             border: 3px solid #f6f6f6;
-            // border: 5px solid var(--color-gray-dark);
+        }
+    
+        a {
+            display: block;
+            width: 100%;
+
+            > div {
+                position: unset !important;
+            }
+
+            :global(.image) {
+                object-fit: contain;
+                width: 100% !important;
+                position: relative !important;
+                height: unset !important;
+            }
         }
     }
 }

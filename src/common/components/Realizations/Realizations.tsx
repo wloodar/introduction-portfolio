@@ -67,7 +67,12 @@ const Realizations = () => {
                                     </div>
                                     <div className={s.pic}>
                                         <a href={val.demo_link} target="_blank">
-                                            <img src={val.pic_dest} alt="" />
+                                            <Image 
+                                                src={val.pic_dest} 
+                                                alt="Memoji Face" 
+                                                layout="fill"
+                                                className="image"
+                                            />
                                         </a>
                                     </div>
                                 </li>
