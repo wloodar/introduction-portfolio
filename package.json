@@ -25,7 +25,8 @@
     "react-dom": "17.0.2",
     "react-scroll": "^1.8.2",
     "swiper": "^7.0.2",
-    "typewriter-effect": "^2.18.0"
+    "typewriter-effect": "^2.18.0",
+    "write-json-file": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "17.0.11",

@@ -1,11 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import mailDataFile from './mail.json';
 
-export default function (
+interface mailMessage {
+    name: String,
+    email: String,
+    text: String
+}
+
+export default async function (
     req: NextApiRequest, 
     res: NextApiResponse
 ) {
 
     const nodemailer = require('nodemailer');
+    const fs = require('fs');
+
     const transporter = nodemailer.createTransport({
         port: 465,
         host: "smtp.gmail.com",
@@ -16,6 +25,16 @@ export default function (
         },
         secure: true,
     })
+    
+    const mailCredentialsForFile: mailMessage = {
+        name: req.body.name,
+        email: req.body.email,
+        text: req.body.message
+    }
+    
+    const newMailDataFile = [...mailDataFile, mailCredentialsForFile];
+
+    fs.writeFileSync('./src/pages/api/mail.json', JSON.stringify(newMailDataFile))
 
     const mailData = {
         from: req.body.email,
