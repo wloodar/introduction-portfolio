@@ -2,8 +2,14 @@
 
 .wrap {
     background: #fff;
-    margin-bottom: 20rem;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
     // margin-top: -15vh;
+
+    @include respond(tab-port) {
+        margin-top: 1rem;
+        // margin-bottom: 3rem;
+    }
 }
 
 .wrapper {

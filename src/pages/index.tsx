@@ -53,9 +53,9 @@ const Home = () => {
     })
 
     useEffect(() => {
-        // const interval = setInterval(() => {
-        //     setIsTransitioning(isTransitioning => !isTransitioning);
-        // }, 1000);
+        const interval = setInterval(() => {
+            setIsTransitioning(isTransitioning => !isTransitioning);
+        }, 1000);
 
         // const stopTrigger = () => {
         //     const tl = gsap.timeline({

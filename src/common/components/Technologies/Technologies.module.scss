@@ -2,7 +2,7 @@
 
 .root {
     background: #0a0a0a;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
 
     @include respond(phone) {
         margin-top: -100px;
@@ -38,7 +38,7 @@
 }
 
 .list {
-    max-width: 60rem;
+    max-width: 50rem;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
