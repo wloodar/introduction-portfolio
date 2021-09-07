@@ -49,11 +49,11 @@ const Home = () => {
     })
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIsTransitioning(isTransitioning => !isTransitioning);
-        }, 1000);
+        // const interval = setInterval(() => {
+        //     setIsTransitioning(isTransitioning => !isTransitioning);
+        // }, 1000);
 
-        return () => clearInterval(interval);
+        // return () => clearInterval(interval);
     }, []);
 
     return (
