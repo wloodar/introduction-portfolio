@@ -1,5 +1,57 @@
 @import '../../common/sass/global.scss';
 
+.modal {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba($color: #000000, $alpha: .55);
+    z-index: 999;
+}
+
+.modalBox {
+    @include absoluteCenter();
+    top: 45%;
+    background: #fff;
+    max-width: 40rem;
+    border-radius: var(--border-radius);
+    padding: 5rem 4rem;
+    text-align: center;
+
+    h3 {
+        padding-bottom: 2.4rem;
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.7rem;
+        line-height: 1.5;
+    }
+
+    button {
+        margin-top: 2.7rem;
+        display: inline-block;
+    }
+}
+
+.success {
+    margin-top: 7.4rem;
+    margin-bottom: 2.1rem;
+    text-align: center;
+
+    img {
+        width: 30rem;
+        margin: auto;
+    }
+}
+
+.successInfo {
+    margin-top: 4.7rem;
+
+    :global(.bsP) {
+        margin: auto;
+        max-width: 48rem;
+    }
+}
+
 .contactForm {
     margin-top: 50px;
 
@@ -7,9 +59,19 @@
         width: 100%;
     }
 
+    &__overlay {
+        @include transition(.4s opacity ease);
+    }
+
     button {
         display: block;
         margin-left: auto;
+        @include transition(.5s all ease);
+        height: 4.7rem;
+
+        img {
+            width: 2rem;
+        }
     }
 }
 

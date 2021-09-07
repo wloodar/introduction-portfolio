@@ -15,12 +15,6 @@ interface realizations {
 
 const realizationsList: realizations[] = [
     {
-        title: "Sklep internetowy Lampypolska.pl",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
-        pic_dest: '/img/realizations/lampypolska.png',
-        demo_link: 'https://lampypolska.pl/'
-    },
-    {
         title: "Portal Ekipakopernika",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
         pic_dest: '/img/realizations/ekipakopernika.png',
@@ -31,6 +25,12 @@ const realizationsList: realizations[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
         pic_dest: '/img/realizations/polerowanieal.png',
         demo_link: "https://polerowanieal.pl/"
+    },
+    {
+        title: "Sklep internetowy Lampypolska.pl",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
+        pic_dest: '/img/realizations/lampypolska.png',
+        demo_link: 'https://lampypolska.pl/'
     },
     {
         title: "Wizytówka ELCO",

@@ -45,13 +45,20 @@ export default async function (
         ${req.body.email}</p>`
     }
 
+    if (req.body.email == "" || req.body.message == "") {
+        return res.status(400).json({
+            status: 0,
+            error: 'Wystąpił błąd podczas wysyłania wiadomości - sprawdź czy wszystkie pola zostały prawidłowo wypełnione.'
+        }) 
+    }
+    
     transporter.sendMail(mailData, function (err, info) {
         if (err) {
-            res.status(400).json({
+            return res.status(400).json({
                 status: 0
             })
         } else {
-            res.status(200).json({
+            return res.status(200).json({
                 status: 1
             })
         }
