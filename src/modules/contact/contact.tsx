@@ -1,16 +1,10 @@
 import useTranslation from 'next-translate/useTranslation';
 import React, { useState } from 'react';
 import Image from 'next/image'
-import Link from 'next/link';
-import cs from 'classnames';
-import Layout from '../../common/components/Layout/Layout';
 import MemojiFace from '../../../public/img/memoji-peace.png';
-import ContactMeHand from '../../../public/img/icons/contact-me-hand.png';
 
 import FadeInComponent from '../../common/utils/fadeInComponent';
 import s from './contact.module.scss';
-
-// import MailSuccess from '../../../public/img/assets/mailSend.svg';
 
 interface ContactCredentials {
     name: string,
@@ -94,7 +88,7 @@ const Contact = () => {
             </div>
         </div> : <FadeInComponent>
             <div className="s-container" id="contact">
-                <div className="boxhead boxhead__icon center flex-center">
+                <div className="boxhead center">
                     <h2>{t('common:In touch?')}</h2>
                 </div>
                 <form className={s.contactForm} onSubmit={submitContactForm}>

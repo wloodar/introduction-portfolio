@@ -33,22 +33,16 @@
 
 .techsContainer {
     margin-top: 60px;
-    // margin-left: -25px;
-    // margin-left: -60px;
 }
 
 .list {
     max-width: 50rem;
     margin: auto;
-    display: flex;
+    @include display-flex();
+    @include flex-justify-content(center);
     flex-wrap: wrap;
-    justify-content: center;
-    // display: grid;
-    // grid-template-columns: 33% 33% 33%;
 
     li {
-        // margin-left: 60px;
-        // margin-bottom: 50px;
         margin: 10px 25px 50px;
         flex: 0 0 calc(33% - 50px);
 
@@ -77,9 +71,6 @@
     padding: 40px;
     box-sizing: border-box;
 
-    // @include respond(phone) {
-    //     padding: 25px;
-    // }
     @media screen and (max-width: 25em) {
         padding: 35px;
     }

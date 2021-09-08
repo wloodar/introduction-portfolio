@@ -1,17 +1,12 @@
 @import '../common/sass/global.scss';
 
 .header {
-    // margin-top: 27vh;
     width: 100%;
-    // min-height: 50vh;
     padding-top: 25vh;
     margin-bottom: 15vh;
-    // z-index: -1;
-    // min-height: calc(100vh - 15rem);
 
     @include respond(tab-port) {
         padding-top: 20vh;
-        // min-height: calc(80vh - 15rem);
     }
 
     @media screen and (max-width: 30em) {
@@ -19,16 +14,6 @@
         min-height: calc(100vh - 10rem);
         overflow: hidden;
         margin-bottom: 5vh;
-    }
-
-    &__bg {
-        // position: absolute;
-        // top: 0; height: 100vh; right: 0; left: 0;
-        // background: url('../../public/img/header-gradient.png');
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: bottom;
-        // opacity: 0.1;
     }
 
     :global(.container) {
@@ -47,7 +32,6 @@
         }
 
         @media screen and (max-width: 43.75em) {
-            // display: none;
             @include transform(none);
             text-align: center;
             right: 0;
@@ -99,8 +83,6 @@
     }
 
     &__centerbox {
-        // @include absoluteCenter;
-        // top: 45%;
         text-align: center;
 
         :global(.boxhead) {
@@ -109,11 +91,7 @@
 
             // 700 px
             @media screen and (max-width: 43.75em) {
-                // height: 200px;
                 height: auto;
-                // @include display-flex();
-                // @include box-align(center);
-                // @include flex-justify-content(center);
             }
         }
 
@@ -179,7 +157,6 @@
     }
 
     &__animation {
-        // @include transform(translateY(12px));
         @include transform(translateY(21px));
     }
 }

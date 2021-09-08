@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 // @ts-ignore
 import { animateScroll } from 'react-scroll';
 import useTranslation from 'next-translate/useTranslation';
@@ -8,7 +7,6 @@ import s from './Navbar.module.scss';
 
 import NavList from '../NavList/NavList';
 import NavItem from '../NavItem/NavItem';
-import Internationalization from '../../../modules/internationalization/internationalization'; 
 
 const Navbar = () => {
 
@@ -55,9 +53,6 @@ const Navbar = () => {
                             <span></span>
                         </label>
                     </div>
-                    {/* <div className={s.mobileInternationalization}>
-                        <Internationalization/>
-                    </div> */}
                 </div>
                 <span className={s.mobile} style={ navOpen ? { visibility: 'visible', opacity: '1' } : undefined } onClick={() => toggleMenu()}>
                     <span className={s.mobileBox}>
@@ -65,9 +60,6 @@ const Navbar = () => {
                             <NavList/>
                         </div>
                         <div className={s.right}>
-                            {/* <div className={s.lang}>
-                                <Internationalization/>
-                            </div> */}
                             <div className={s.action}>
                                 <NavItem anchor="contact" itemName={t('common:Reach me')} classes="btn btnPrimary"/>
                             </div>

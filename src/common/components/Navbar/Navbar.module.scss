@@ -97,7 +97,6 @@
     @include respond(tab-port) {
         position: absolute;
         background: rgba($color: #fff, $alpha: .94);
-        // top: 78px;
         top: 63px;
         right: 0;
         left: 0;
@@ -135,8 +134,7 @@
 }
 
 .mobileIcon {
-    // margin-right: 2.4rem;
-
+    
     label {
         @include display-flex();
         flex-direction: column;

@@ -48,7 +48,6 @@ const Realizations = () => {
         <div className="container" id="realizations">
             <div className={s.wrap}>
                 <div className="boxhead boxhead__subtitle">
-                    {/* <h2>{t('common:My realizations')}</h2> */}
                     <h2>Wykonane projekty</h2>
                     <p>Sklep internetowy, wizytówka? A może portal?</p>
                 </div>

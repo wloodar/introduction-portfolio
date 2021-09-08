@@ -1,13 +1,9 @@
-import React, { RefObject, useEffect, useRef } from 'react';
+import React, { RefObject, useRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
-import gsap from 'gsap';
 import FadeInComponent from '../../utils/fadeInComponent';
 
-// import Memoji from '../../../../public/img/memoji-like.png';
 import MePic from '../../../../public/img/me.jpg';
-import WavingHand from '../../../../public/img/icons/waving-hand.png';
-
 import s from './About.module.scss';
 
 const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
@@ -18,33 +14,6 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
 
     const { t } = useTranslation();
 
-    useEffect(() => {
-
-        // const stopTrigger = () => {
-        //     const tl = gsap.timeline({
-        //         delay: 1,
-        //         scrollTrigger: {
-        //             trigger: header.current,
-        //             start: "top top",
-        //             pin: true,
-        //             scrub: true,
-        //         }
-        //     })
-
-        //     // tl.to(sectionRef.current, { y: header.current?.clientHeight === undefined ? -200 : - header.current?.clientHeight! });
-        //     // tl.to(wrapRef.current, { translateY: 0 });
-        //     // tl.fromTo(descRef.current, { translateY: -30 }, { translateY: 0 });
-        //     // tl.to(sectionRef.current, { background: "#000" });
-
-        //     return tl;
-        // }
-
-        // const master = gsap.timeline();
-
-        // master.add(stopTrigger());
-
-    }, [])
-
     return (
         <div className="scroll" ref={sectionRef}>
             <section className={s.wrap}>
@@ -54,12 +23,6 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
                             <div className={s.description} ref={descRef}>
                                 <div className="boxhead">
                                     <h2>{t('common:Hello there, my name is')} ...</h2>
-                                    {/* <div className="icon">
-                                        <Image
-                                            src={WavingHand}
-                                            alt="Hand Emoji"
-                                        />
-                                    </div> */}
                                 </div>
                                 <div className="bsP">
                                     <p>I już od kilku lat pasjonuje mnie programowanie. Projektowanie i tworzenie nowych witryn internetowych czy aplikacji internetowych jest dla mnie niesamowitą przygodą i przyjemnością. Uwielbiam poszerzać swoje horyzonty i stawiać czoła nowym wyzwaniom.</p>

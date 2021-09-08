@@ -1,11 +1,8 @@
 import s from './Footer.module.scss';
-import useTranslation from 'next-translate/useTranslation';
 
 import NavList from '../NavList/NavList';
 
 function Footer () {
-
-    const { t } = useTranslation();
 
     return (
         <footer className={s.footer}>
