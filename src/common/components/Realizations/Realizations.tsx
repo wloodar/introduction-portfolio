@@ -17,14 +17,14 @@ interface realizations {
 const realizationsList: realizations[] = [
     {
         title: "Portal Ekipakopernika",
-        description: "Ekipakopernika powstało z myślą przedstawienia zainteresowań, zdolności i talentów uczniów szkoły licealnej w Chełmnie.",
+        description: "Ekipakopernika powstało z myślą przedstawienia zainteresowań, zdolności i talentów uczniów szkoły licealnej w Chełmnie. Portal umożliwiał dodawanie / administrację postami, dzielenie publikacji na poszczególne kategorie, umieszczanie wydarzeń oraz wyświetlanie listy osób zangażowanych w projekt. W ramach aplikacji, został stworzony od fundamentów backend wraz z frontendem i panelem administracyjnym.",
         pic_dest: '/img/realizations/ekipakopernika.png',
         demo_link: "http://ekipakopernika.wlodev.com/",
         technologies: ["react", "postgresql", "node-js"]
     },
     {
         title: "Wizytówka PolerowanieAL",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
+        description: "Firma PolerowanieAL oferuje usługi polerowania wibracyjnego aluminium, piaskowania & szkiełkowania, oraz renowacji zabytkowych motocykli. Głównym planem realizacji było stworzenie atrakcyjnej wizytówki firmy w postaci strony internetowej. W tym celu zastosowana została przejrzysta szata graficzna opierająca się na nowoczesnych technologia, w efekcie przekładając się na wygodną nawigację i szybkie działanie strony.",
         pic_dest: '/img/realizations/polerowanieal.png',
         demo_link: "https://polerowanieal.pl/",
         technologies: ["gatsby", "sass"]

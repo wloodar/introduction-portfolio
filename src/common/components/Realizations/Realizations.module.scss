@@ -64,7 +64,7 @@
         }
 
         p {
-            font-size: 1.7rem;
+            font-size: 1.55rem;
             line-height: 1.5;
         }
 
@@ -99,6 +99,11 @@
 
         @include respond(tab-port) {
             width: 100%;
+        }
+
+        @include respond(phone) {
+            margin-top: -2.7rem;
+            
         }
 
         img {
