@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     window.addEventListener("load", function(){
       setLoading(!loading);
       if (loadingScreenRef !== null) {
+        // @ts-ignore: Object is possibly 'null'.
         loadingScreenRef!.current.style.opacity = 0;
       }
     });
