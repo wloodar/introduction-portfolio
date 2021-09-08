@@ -31,14 +31,14 @@ const realizationsList: realizations[] = [
     },
     {
         title: "Sklep internetowy Lampypolska.pl",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
+        description: "Po upływie ponad 25 lat nadszedł czas na wejście w nowy rynek - sklep internetowy Lampypolska.pl powstał z myślą o poszerzeniu swoich możliwości sprzedaży wkraczając w temat ecommerce. Głównym założeniem realizacji, było stworzenie wydajnego i szybkiego sklepu internetowego wraz z przejrzystą szatą graficzną i intuicyjnym procesem zakupowym.",
         pic_dest: '/img/realizations/lampypolska.png',
         demo_link: 'https://lampypolska.pl/',
-        technologies: ["shoper.png", "sass"]
+        technologies: ["shoper.png", "sass", "google-ads"]
     },
     {
         title: "Wizytówka ELCO",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
+        description: "Już od ponad 20 lat, firma ELCO zajmuje się produkcją klasycznych lamp z ceramiki w szczególnie zachowanej tradycjii. Po upływie wielu lat, nadszedł czas na zmiany. W tym celu strona internetowa firmy ELCO przeszła gruntowne zmiany pod kątem wykorzystanej technologii oraz szaty graficznej. Wprowadzony został styl minimalistyczny, by nie odciągać uwagi potencjalnego klienta od samej oferty.",
         pic_dest: '/img/realizations/elco-lampy-ceramiczne.png',
         demo_link: "http://lampyceramiczne.pl/",
         technologies: ["gatsby", "sass"]
