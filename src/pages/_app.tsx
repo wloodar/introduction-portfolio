@@ -17,7 +17,7 @@ import '../../public/styles/app.css';
 function MyApp({ Component, pageProps }: AppProps) {
   
   const [loading, setLoading] = useState<boolean>(true);
-  const loadingScreenRef = useRef<HTMLElement>(null);
+  const loadingScreenRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     window.addEventListener("load", function(){
