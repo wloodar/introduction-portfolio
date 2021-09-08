@@ -25,6 +25,9 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
                                 <div className="boxhead">
                                     <h2>{t('common:Hello there, my name is')} ...</h2>
                                 </div>
+                                <div className={s.highlight}>
+                                    <p>FullStack Developer</p>
+                                </div>
                                 <div className="bsP">
                                     <p>I już od kilku lat pasjonuje mnie programowanie. Projektowanie i tworzenie nowych witryn internetowych czy aplikacji internetowych jest dla mnie niesamowitą przygodą i przyjemnością. Uwielbiam poszerzać swoje horyzonty i stawiać czoła nowym wyzwaniom.</p>
                                 </div>

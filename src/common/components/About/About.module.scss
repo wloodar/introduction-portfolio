@@ -34,6 +34,15 @@
     }
 }
 
+.highlight {
+    margin-bottom: 1.4rem;
+
+    p {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+}
+
 .memoji {
     border-radius: 25px;
     overflow: hidden;

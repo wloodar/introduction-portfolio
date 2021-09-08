@@ -60,12 +60,6 @@
                 font-size: 1.65rem;
                 color: var(--color-dark);
 
-                // @include respond(tab-port) {
-                //     @include display-flex();
-                //     @include box-align(center);
-                //     @include flex-justify-content(center);
-                // }
-
                 span {
                     font-size: 1.2rem;
                     font-weight: 500;
@@ -97,7 +91,6 @@
     a {
         display: block;
         text-align: center;
-        // padding: 12px 34px;
     }
 }
 
@@ -144,8 +137,6 @@
 
                     a {
                         font-size: 4rem;
-                        // font-size: 2.3rem;
-                        // font-weight: 500;
                         font-weight: 600
                     }
                 }
@@ -159,8 +150,7 @@
         position: absolute;
         top: 8%;
         left: 2.4rem;
-        right: 2.4rem;
-        // @include absoluteCenter();        
+        right: 2.4rem;      
     }
 }
 
