@@ -42,7 +42,7 @@ const Home = () => {
     return (
         <Layout>
             <Head>
-                <title>Wlodev - JS Dev | Jakub Wlodarczyk&apos;s Portfolio</title>
+                <title>Wlodev - Fullstack Web Dev | Jakub Wlodarczyk&apos;s Portfolio</title>
                 <link rel="shortcut icon" href="img/assets/icon-white-gradient-bright.png"/>
             </Head>
             <header className={s.header} id="main-header" ref={headerRef}>

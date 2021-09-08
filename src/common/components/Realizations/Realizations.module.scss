@@ -83,6 +83,16 @@
             }
         }
     }
+
+    .technologies {
+        margin-top: 1.7rem;
+
+        img {
+            display: inline-block;
+            margin-right: 2rem;
+            width: 3rem;
+        }
+    }
     
     .pic {
         width: $pic_size;
