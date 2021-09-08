@@ -2,7 +2,7 @@
 
 .root {
     background: #0a0a0a;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 
     @include respond(phone) {
         margin-top: -100px;
@@ -57,7 +57,15 @@
 
             &:nth-child(3) {
                 .bubble {
-                    padding: 20px !important;
+                    padding: 25px !important;
+                }
+            }
+        }
+
+        @media screen and (max-width: 22.1875em) {
+            &:nth-child(3) {
+                .bubble {
+                    padding: 18px !important;
                 }
             }
         }
@@ -72,9 +80,13 @@
     box-sizing: border-box;
 
     @media screen and (max-width: 25em) {
-        padding: 35px;
+        padding: 45px;
     }
 
+    @media screen and (max-width: 22.1875em) {
+        padding: 30px;
+    }
+    
     svg {
         width: 100%;
         height: auto;

@@ -1,17 +1,42 @@
 import cs from 'classnames';
 import FadeInComponent from '../../utils/fadeInComponent';
-
-const TechnologiesList:Array<string> = [
-    "javascript",
-    "next-js",
-    "node-js",
-    "postgresql",
-    "react",
-    "sass",
-    "typescript"
-]
-
 import s from './Technologies.module.scss';
+
+interface TechItem {
+    img: String,
+    name: String
+}
+
+const TechnologiesList:TechItem[] = [
+    {
+        img: "javascript",
+        name: "Javascript"
+    },
+    {
+        img: "next-js",
+        name: "NextJS"
+    },
+    {
+        img: "node-js",
+        name: "NodeJS"
+    },
+    {
+        img: "postgresql",
+        name: "PostgreSql"
+    },
+    {
+        img: "react",
+        name: "ReactJS"
+    },
+    {
+        img: "sass",
+        name: "Sass"
+    },
+    {
+        img: "typescript",
+        name: "Typescript"
+    }
+]
 
 const Technologies = () => {
 
@@ -20,7 +45,7 @@ const Technologies = () => {
             <li>
                 <FadeInComponent>
                     <div className={s.bubble}>
-                        <img src={`/img/technologies/${tech}.svg`} alt={`Technologia ${tech}`} />
+                        <img src={`/img/technologies/${tech.img}.svg`} alt={`Technologia ${tech.img}`} />
                     </div>
                 </FadeInComponent>
             </li>

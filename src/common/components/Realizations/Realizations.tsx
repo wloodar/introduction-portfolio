@@ -19,7 +19,7 @@ const realizationsList: realizations[] = [
         title: "Portal Ekipakopernika",
         description: "Ekipakopernika powstało z myślą przedstawienia zainteresowań, zdolności i talentów uczniów szkoły licealnej w Chełmnie. Portal umożliwiał dodawanie / administrację postami, dzielenie publikacji na poszczególne kategorie, umieszczanie wydarzeń oraz wyświetlanie listy osób zangażowanych w projekt. W ramach aplikacji, został stworzony od fundamentów backend wraz z frontendem i panelem administracyjnym.",
         pic_dest: '/img/realizations/ekipakopernika.png',
-        demo_link: "http://ekipakopernika.wlodev.com/",
+        demo_link: "https://ekipakopernika.wlodev.com/",
         technologies: ["react", "postgresql", "node-js"]
     },
     {
@@ -40,7 +40,7 @@ const realizationsList: realizations[] = [
         title: "Wizytówka ELCO",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sodales augue, sed dictum ligula eleifend eget. Proin tortor mauris, cursus et posuere et, tempor fringilla erat. Nullam id vestibulum tortor, in dapibus eros.",
         pic_dest: '/img/realizations/elco-lampy-ceramiczne.png',
-        demo_link: "https://lampyceramiczne.pl/",
+        demo_link: "http://lampyceramiczne.pl/",
         technologies: ["gatsby", "sass"]
     }
 ]
@@ -74,12 +74,19 @@ const Realizations = () => {
                                     </div>
                                     <div className={s.pic}>
                                         <a href={val.demo_link} target="_blank">
-                                            <Image 
-                                                src={val.pic_dest} 
-                                                alt="Memoji Face" 
-                                                layout="fill"
-                                                className="image"
-                                            />
+                                            <div className={s.pic__container}>
+                                                <Image 
+                                                    src={val.pic_dest} 
+                                                    alt="Memoji Face" 
+                                                    layout="fill"
+                                                    className="image"
+                                                />                                       
+                                            </div>
+                                            <div className={s.pic__overlay}>
+                                                <p>
+                                                    {val.demo_link}  
+                                                </p>
+                                            </div>
                                         </a>
                                     </div>
                                 </li>

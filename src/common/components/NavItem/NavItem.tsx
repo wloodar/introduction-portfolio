@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 
 interface Props {
     anchor: string,
-    itemName: string,
+    itemName: any,
     classes?: string
 } 
 
@@ -17,6 +17,7 @@ const NavItem:React.FC<Props> = ({ anchor, itemName, classes }) => {
     
     return (
         <Link className={classes} to={anchor} spy={true} smooth={true} offset={-offset} duration={500}>
+            {/* <div dangerouslySetInnerHTML={{ __html: itemName }}></div> */}
             {itemName}
         </Link>
     )

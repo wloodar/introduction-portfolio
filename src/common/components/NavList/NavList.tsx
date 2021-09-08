@@ -3,7 +3,7 @@ import NavItem from '../NavItem/NavItem';
 
 interface NavLink {
     anchor: string,
-    name: string
+    name: string | Array<any>
 }
 
 const NavList = () => {
@@ -13,19 +13,19 @@ const NavList = () => {
     const data: Array<NavLink> = [
         {
             anchor: "about",
-            name: t('common:About me')
+            name: [<span>I</span>, t('common:About me')],
         },
         {
             anchor: "technologies",
-            name: t('common:Technologies')
+            name: [<span>II</span>, t('common:Technologies')]
         },
         {
             anchor: "realizations",
-            name: "Wykonane projekty"
+            name: [<span>III</span>, "Wykonane projekty"]
         },
         {
             anchor: "contact",
-            name: t('common:Contact')
+            name: [<span>IV</span>, t('common:Contact')]
         }
     ];
 

@@ -55,6 +55,12 @@
                 font-weight: 500;
                 color: #fff;
 
+                span {
+                    font-size: 1.2rem;
+                    margin-right: 1rem;
+                    color: #616161;
+                }
+
                 &:hover {
                     color: var(--color-primary);
                 }

@@ -24,13 +24,19 @@
 
 .btn {
     border-radius: var(--border-radius);
-    padding: 12px 19px;
+    // padding: 12px 19px;
+    padding: 14px 45px;
     box-sizing: border-box;
     font-size: 1.35rem;
     font-weight: 600;
     cursor: pointer;
     background: var(--surface-background);
     color: var(--color-dark);
+    @include transition(.3s background ease);
+
+    &:hover {
+        background: #e3e3e3;
+    }
 }
 
 .btnPrimary {
@@ -41,6 +47,7 @@
     @include transition(.3s opacity ease);
 
     &:hover {
+        background: var(--color-primary);
         opacity: .84;
     }
 }

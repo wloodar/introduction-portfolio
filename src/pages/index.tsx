@@ -25,7 +25,6 @@ const Home = () => {
 
     const [windowWidth, setWindowWidth] = useState<Number>(0);
     const headerRef = useRef<HTMLElement>(null);
-    const headerBg = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
 
     useLayoutEffect(() => {

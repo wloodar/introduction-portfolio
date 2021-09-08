@@ -35,7 +35,9 @@
     @include respond(tab-port) {
         position: relative;
         top: unset;
-
+        left: unset;
+        @include transform(none);
+        margin-bottom: 4.7rem;
     }
 
     ul {
@@ -58,6 +60,25 @@
                 font-size: 1.65rem;
                 color: var(--color-dark);
 
+                // @include respond(tab-port) {
+                //     @include display-flex();
+                //     @include box-align(center);
+                //     @include flex-justify-content(center);
+                // }
+
+                span {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    margin-right: .7rem;
+                    color: var(--color-secondary);
+                    margin-left: -1.7rem;
+                    display: inline-block;
+
+                    @include respond(tab-port) {
+                        margin-right: 2rem;
+                    }
+                }
+
                 &:hover {
                     color: var(--color-primary);
                 }
@@ -68,6 +89,10 @@
 
 .right {
     @include display-flex();
+
+    div {
+        margin: auto;
+    }
 
     a {
         display: block;
@@ -115,11 +140,13 @@
             
             ul {
                 li {
-                    margin-bottom: 2.7rem;
+                    margin-bottom: 2.8rem;
 
                     a {
-                        font-size: 2.3rem;
-                        font-weight: 500;
+                        font-size: 4rem;
+                        // font-size: 2.3rem;
+                        // font-weight: 500;
+                        font-weight: 600
                     }
                 }
             }
@@ -129,7 +156,11 @@
 
 .mobileBox {
     @include respond(tab-port) {
-        @include absoluteCenter();        
+        position: absolute;
+        top: 8%;
+        left: 2.4rem;
+        right: 2.4rem;
+        // @include absoluteCenter();        
     }
 }
 

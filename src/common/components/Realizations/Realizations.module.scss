@@ -39,14 +39,16 @@
     background: #f9f9f9;
     padding: 2.7rem 3.4rem;
     border-radius: var(--border-radius);
-
+    overflow: hidden;
+    
     @include respond(tab-land) {
         $pic_size: 500px;
     }
 
     @include respond(tab-port) {
         flex-direction: column-reverse;
-        padding: 2.7rem 2.5rem;
+        padding: 0;
+        border: 1px solid #f3f3f3;
     }
 
     .info {
@@ -56,7 +58,8 @@
         @include respond(tab-port) {
             width: 100%;
             margin-right: 0;
-            margin-top: 4.2rem;
+            margin-top: 2.4rem;
+            padding: 0rem 2.5rem 2.7rem;
         }
 
         h3 {
@@ -90,31 +93,36 @@
         img {
             display: inline-block;
             margin-right: 2rem;
-            width: 3rem;
+            width: 3.5rem;
         }
     }
     
     .pic {
         width: $pic_size;
+        border-radius: var(--border-radius);
+        border: 3px solid #f6f6f6;
+        overflow: hidden;
 
         @include respond(tab-port) {
             width: 100%;
-        }
-
-        @include respond(phone) {
-            margin-top: -2.7rem;
-            
-        }
-
-        img {
-            border-radius: var(--border-radius);
-            border: 3px solid #f6f6f6;
+            border: 0;
+            border-radius: 0;
+            // border-bottom: 1px solid #f3f3f3;
         }
     
         a {
             display: block;
             width: 100%;
+            position: relative;
 
+            &:hover {
+                .pic__overlay {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__container {
             > div {
                 position: unset !important;
             }
@@ -124,6 +132,21 @@
                 width: 100% !important;
                 position: relative !important;
                 height: unset !important;
+            }
+        }
+
+        &__overlay {
+            position: absolute !important;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: rgba($color: #000, $alpha: .7);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            opacity: 0;
+            @include transition(.4s all ease);
+
+            p {
+                @include absoluteCenter();
+                color: #ddd;
+                font-weight: 500;
             }
         }
     }
