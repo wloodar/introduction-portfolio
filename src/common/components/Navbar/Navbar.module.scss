@@ -50,6 +50,12 @@
 
             @include respond(tab-port) {
                 display: block;
+                -webkit-transition: transform .5s ease, padding .5s ease;
+                -moz-transition: transform .5s ease, padding .5s ease;
+                -o-transition: transform .5s ease, padding .5s ease;
+                transition: transform .5s ease, padding .5s ease;
+                transform: translateY(30px);
+                opacity: 0;
                 
                 &:not(:first-child) {
                     padding-left: 0;
