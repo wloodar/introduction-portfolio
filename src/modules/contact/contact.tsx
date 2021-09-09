@@ -76,7 +76,7 @@ const Contact = () => {
 
         {contactSuccess ? <div className="s-container">
             <div className={s.success}>
-                <img src="/img/assets/mailSend.svg" alt="" />
+                <img src="/img/assets/mailSend.svg" alt="Grafika wiadomość została pomyślnie wysłana" />
                 <div className={s.successInfo}>
                     <div className="boxhead center">
                         <h2>Wiadomość wysłana!</h2>
@@ -165,7 +165,7 @@ const Contact = () => {
                                 <div className={s.contactDetails__memoji}>
                                     <Image 
                                         src={MemojiFace} 
-                                        alt="Memoji Face" 
+                                        alt="Moja grafika memoji" 
                                         objectFit="contain"
                                     />
                                 </div>

@@ -56,8 +56,6 @@ const FadeInComponent = ({ children }) => {
             setOpacityVal(1);
             setTransformVal(0);
         }
-
-        // console.log(yPos + " | " + opacityVal + " | " + transformVal);
     }
 
     return (

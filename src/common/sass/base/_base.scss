@@ -32,12 +32,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-// h5 {
-//     font-size: 1.9rem;
-//     font-weight: 500;
-//     color: var(--color-dark);
-// }
-
 a {
     color: inherit;
     cursor: pointer;
@@ -68,13 +62,10 @@ img {
     height: auto;
 }
 
-// --color-dark: #132e4d;
-
 :root {
     --color-primary: #1872fa;
     --color-primary-dark: #0453cb;
     --color-primary-bright: #f1f9fa;
-    // --color-dark: #1f1f1f;
     --color-secondary: #7e7e7e;
     --color-dark: #0f0f0f;
     --color-white: #fff;
@@ -83,7 +74,6 @@ img {
 
     --border-primary: #f1f1f1;
 
-    // --surface-background: #f2f2ff;
     --surface-background: #f1f1f5;
 
     --border-radius: 11px;

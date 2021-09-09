@@ -77,7 +77,7 @@ const Realizations = () => {
                                             <div className={s.pic__container}>
                                                 <Image 
                                                     src={val.pic_dest} 
-                                                    alt="Memoji Face" 
+                                                    alt={`Podgląd realizacji - ${val.title}`} 
                                                     layout="fill"
                                                     className="image"
                                                 />                                       

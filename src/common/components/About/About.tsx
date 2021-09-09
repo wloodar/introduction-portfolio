@@ -36,7 +36,7 @@ const About:React.FC<{ header: RefObject<HTMLElement> }> = ({ header }) => {
                             <div className={s.memoji}>
                                 <Image
                                     src={MePic}
-                                    alt="My memoji"
+                                    alt="Moje zdjęcie portretowe"
                                     loading="lazy"
                                 />
                             </div>

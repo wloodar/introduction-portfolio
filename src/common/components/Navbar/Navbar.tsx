@@ -60,7 +60,6 @@ const Navbar = () => {
         }
 
         setNavOpen(!navOpen);
-        // console.log($(navListRef.current).children());
     }
 
     return (

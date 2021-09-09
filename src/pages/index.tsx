@@ -41,9 +41,40 @@ const Home = () => {
     return (
         <Layout>
             <Head>
-                <title>Wlodev - Fullstack Web Dev | Jakub Wlodarczyk&apos;s Portfolio</title>
+                <meta charSet="utf-8"/>
+
+                <title>Wlodev - Fullstack Web Dev | Jakub Włodarczyk&apos;s Portfolio</title>
+                <meta name="description" content="Zastanawiasz się nad budową swojego wizerunku w internecie - strona internetowa, wizytówka, sklep internetowy, a może aplikacja? Szukasz programisty? Idealnie trafiłeś - chętnie pomogę zrealizować Twoje plany i marzenia!"/>
+                <meta name="author" content="Jakub Włodarczyk"/>
                 <link rel="shortcut icon" href="img/assets/icon-white-gradient-bright.png"/>
-                <meta name="google-site-verification" content="bN6AgVoAxwfyNkqTT76HLYBvDloHONl8_695vFos6Ic" />
+                
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Wlodev - Fullstack Web Dev | Jakub Włodarczyk&apos;s Portfolio" />
+                <meta property="og:description" content="Zastanawiasz się nad budową swojego wizerunku w internecie - strona internetowa, wizytówka, sklep internetowy, a może aplikacja? Szukasz programisty? Idealnie trafiłeś - chętnie pomogę zrealizować Twoje plany i marzenia!" />
+                <meta property="og:image" content="img/assets/icon-white-black.png" />
+                <meta property="og:url" content="http://wlodev.com/" />
+                <meta property="og:site_name" content="Wlodev" />
+
+                <meta name="twitter:title" content="Wlodev - Fullstack Web Dev | Jakub Włodarczyk&apos;s Portfolio"/>
+                <meta name="twitter:description" content="Zastanawiasz się nad budową swojego wizerunku w internecie - strona internetowa, wizytówka, sklep internetowy, a może aplikacja? Szukasz programisty? Idealnie trafiłeś - chętnie pomogę zrealizować Twoje plany i marzenia!"/>
+                <meta name="twitter:image" content="img/assets/icon-white-black.png"/>
+
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `,
+                    }}
+                />
             </Head>
             <header className={s.header} id="main-header" ref={headerRef}>
                 <div className="container">
@@ -78,17 +109,19 @@ const Home = () => {
                         <p>Scroll</p>
                         <Image
                             src={PointerEmoji}
-                            alt="Pointer emoji"
+                            alt="Emotka scroll w dół"
                         />
                     </div>
                     <div className={s.header__mockupLeft}>
                         <Image
                             src={LampypolskaMockup}
+                            alt="Mockup realizacji dla lampypolska.pl"
                         />
                     </div>
                     <div className={s.header__mockupRight}>
                         <Image
                             src={SigmaMockup}
+                            alt="Mockup realizacji dla sigmatorun.pl"
                         />
                     </div>
                 </div>
