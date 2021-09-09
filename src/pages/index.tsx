@@ -43,19 +43,19 @@ const Home = () => {
             <Head>
                 <meta charSet="utf-8"/>
 
-                <title>Wlodev - Fullstack Web Dev | Jakub Włodarczyk&apos;s Portfolio</title>
+                <title>Wlodev - FullStack Web Dev | Jakub Włodarczyk&apos;s Portfolio</title>
                 <meta name="description" content="Zastanawiasz się nad budową swojego wizerunku w internecie - strona internetowa, wizytówka, sklep internetowy, a może aplikacja? Szukasz programisty? Idealnie trafiłeś - chętnie pomogę zrealizować Twoje plany i marzenia!"/>
                 <meta name="author" content="Jakub Włodarczyk"/>
                 <link rel="shortcut icon" href="img/assets/icon-white-gradient-bright.png"/>
                 
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Wlodev - Fullstack Web Dev | Jakub Włodarczyk&apos;s Portfolio" />
+                <meta property="og:title" content="Wlodev - FullStack Web Dev | Jakub Włodarczyk&apos;s Portfolio" />
                 <meta property="og:description" content="Zastanawiasz się nad budową swojego wizerunku w internecie - strona internetowa, wizytówka, sklep internetowy, a może aplikacja? Szukasz programisty? Idealnie trafiłeś - chętnie pomogę zrealizować Twoje plany i marzenia!" />
                 <meta property="og:image" content="img/assets/icon-white-black.png" />
                 <meta property="og:url" content="http://wlodev.com/" />
                 <meta property="og:site_name" content="Wlodev" />
 
-                <meta name="twitter:title" content="Wlodev - Fullstack Web Dev | Jakub Włodarczyk&apos;s Portfolio"/>
+                <meta name="twitter:title" content="Wlodev - FullStack Web Dev | Jakub Włodarczyk&apos;s Portfolio"/>
                 <meta name="twitter:description" content="Zastanawiasz się nad budową swojego wizerunku w internecie - strona internetowa, wizytówka, sklep internetowy, a może aplikacja? Szukasz programisty? Idealnie trafiłeś - chętnie pomogę zrealizować Twoje plany i marzenia!"/>
                 <meta name="twitter:image" content="img/assets/icon-white-black.png"/>
 
