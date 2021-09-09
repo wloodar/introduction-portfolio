@@ -43,6 +43,7 @@ const Home = () => {
             <Head>
                 <title>Wlodev - Fullstack Web Dev | Jakub Wlodarczyk&apos;s Portfolio</title>
                 <link rel="shortcut icon" href="img/assets/icon-white-gradient-bright.png"/>
+                <meta name="google-site-verification" content="bN6AgVoAxwfyNkqTT76HLYBvDloHONl8_695vFos6Ic" />
             </Head>
             <header className={s.header} id="main-header" ref={headerRef}>
                 <div className="container">
